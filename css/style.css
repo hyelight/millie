@@ -5,7 +5,68 @@
 @import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
 
 :root {
-  --spo: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
-  --app: "AppleSDGothicNeo", "Noto Sans KR", sans-serif;
+  /* Fonts */
+  --spo: "Spoqa Han Sans Neo", "sans-serif";
+  --app-1: "AppleSDGothicNeoT00", sans-serif;
+  --app-2: "AppleSDGothicNeoUL00", sans-serif;
+  --app-3: "AppleSDGothicNeoL00", sans-serif;
+  --app-4: "AppleSDGothicNeoR00", sans-serif;
+  --app-5: "AppleSDGothicNeoM00", sans-serif;
+  --app-6: "AppleSDGothicNeoSB00", sans-serif;
+  --app-7: "AppleSDGothicNeoB00", sans-serif;
+  --app-8: "AppleSDGothicNeoEB00", sans-serif;
+  --app-9: "AppleSDGothicNeoH00", sans-serif;
   --mal: "Malgun Gothic", sans-serif;
+}
+
+/* Default CSS */
+body {
+  font-family: var(--spo);
+}
+
+/* ---------- Header ---------- */
+header {
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 0.5px solid #dfdfdf;
+}
+header::before {
+  content: "";
+  position: absolute;
+  opacity: 0.7;
+}
+header img {
+  height: 25px;
+  cursor: pointer;
+}
+nav {
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+ul li {
+}
+li a {
+  color: rgb(36, 36, 36);
+  padding: 20px 24px;
+}
+nav .login a {
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  width: 82px;
+  padding: 7px 25px;
+  background-color: #333333;
+  text-align: center;
+  border-radius: 100px;
+  margin-left: 24px;
 }
