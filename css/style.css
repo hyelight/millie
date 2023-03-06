@@ -24,6 +24,27 @@
 body {
   font-family: var(--spo);
 }
+section {
+  margin-bottom: 80px;
+}
+
+/* Common CSS */
+.share-p {
+  text-align: center;
+}
+.share-p p:first-child {
+  color: #242424;
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+.share-p p:last-child {
+  color: #555555;
+  font-size: 22px;
+  letter-spacing: -0.6px;
+  line-height: 1.6;
+}
 
 /* ---------- Header ---------- */
 header {
@@ -68,11 +89,11 @@ nav .login a {
 }
 
 /* ---------- Section: welcome ---------- */
-.welcome{
+.welcome {
   background: linear-gradient(#f8faff 67.5%, #f0f4ff 0);
   width: 100%;
 }
-.welcome-inner{
+.welcome-inner {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -80,22 +101,20 @@ nav .login a {
   padding: 155px 10px 85px 41px;
   max-width: 1200px;
 }
-.main-words{
+.main-words {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 580px;
 }
-.welcome-main-ment{
+.welcome-main-ment {
   width: 350px;
-
 }
-.welcome-main-millie{
+.welcome-main-millie {
   width: 180px;
 }
-.welcome-main-bg{
+.welcome-main-bg {
   width: 780px;
   height: 580px;
-  background: url('../img/메인배경.png') no-repeat center / contain;
+  background: url("../img/메인배경.png") no-repeat center / contain;
 }
-
