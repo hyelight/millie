@@ -1,0 +1,192 @@
+{
+  "bestseller": [
+    {
+      "title": "김미경의 마흔 수업",
+      "author": "김미경",
+      "percent": "54%",
+      "time": "223분",
+      "image": "../img/김미경의마흔수업.jpg"
+    },
+    {
+      "title": "세이노의 가르침",
+      "author": "세이노",
+      "percent": "31%",
+      "time": "190분",
+      "image": "../img/세이노의가르침.jpg"
+    },
+    {
+      "title": "K 배터리 레볼루션",
+      "author": "박순혁",
+      "percent": "57%",
+      "time": "176분",
+      "image": "../img/K배터리레볼루션.jpg"
+    },
+    {
+      "title": "만일 내가 인생을 다시 산다면",
+      "author": "김혜남",
+      "percent": "23%",
+      "time": "412분",
+      "image": "../img/만일내가인생을다시산다면.jpg"
+    },
+    {
+      "title": "불편한 편의점",
+      "author": "김호연 지음",
+      "percent": "20%",
+      "time": "479분",
+      "image": "../img/불편한편의점.jpg"
+    },
+    {
+      "title": "불편한 편의점 2",
+      "author": "김호연",
+      "percent": "20%",
+      "time": "548분",
+      "image": "../img/불편한편의점2.jpg"
+    },
+    {
+      "title": "슈퍼리치보다 해피리치를 꿈꿔라",
+      "author": "한지우",
+      "percent": "43%",
+      "time": "122분",
+      "image": "../img/슈퍼리치보다해피리치를꿈꿔라.jpg"
+    }
+  ],
+  "month": [
+    {
+      "title": "12가지 인생의 법칙 (40만 부 기념 스페셜 에디션)",
+      "author": "조던B. 피터슨 지음, 강주헌 옮김",
+      "percent": "31%",
+      "time": "389분",
+      "image": "../img/12가지인생의법칙.jpg"
+    },
+    {
+      "title": "세이노의 가르침",
+      "author": "세이노",
+      "percent": "31%",
+      "time": "190분",
+      "image": "../img/세이노의가르침.jpg"
+    },
+    {
+      "title": "김미경의 마흔 수업",
+      "author": "김미경",
+      "percent": "54%",
+      "time": "223분",
+      "image": "../img/김미경의마흔수업.jpg"
+    },
+    {
+      "title": "악인론",
+      "author": "손수현",
+      "percent": "43%",
+      "time": "265분",
+      "image": "../img/악인론.jpg"
+    },
+    {
+      "title": "GPT 제너레이션",
+      "author": "이시한",
+      "percent": "46%",
+      "time": "176분",
+      "image": "../img/GPT제너레이션.jpg"
+    },
+    {
+      "title": "K 배터리 레볼루션",
+      "author": "박순혁",
+      "percent": "57%",
+      "time": "176분",
+      "image": "../img/K배터리레볼루션.jpg"
+    },
+    {
+      "title": "나도 모르는 내 마음의 심리법칙",
+      "author": "야오야오 / 김진아",
+      "percent": "39%",
+      "time": "140분",
+      "image": "../img/나도모르는내마음의심리법칙.jpg"
+    }
+  ],
+  "audiobest": [
+    {
+      "title": "나는 나를 바꾸기로 했다",
+      "author": "우즈훙 / 이에스더",
+      "percent": "27%",
+      "time": "167분",
+      "image": "../img/나는나를바꾸기로했다.jpg"
+    },
+    {
+      "title": "불편한 편의점",
+      "author": "김호연 지음",
+      "percent": "20%",
+      "time": "479분",
+      "image": "../img/불편한편의점.jpg"
+    },
+    {
+      "title": "알아두면 쓸데있는 신잡학상식",
+      "author": "편집부 지음",
+      "percent": "26%",
+      "time": "471분",
+      "image": "../img/알쓸신잡.jpg"
+    },
+    {
+      "title": "만일 내가 인생을 다시 산다면",
+      "author": "김혜남",
+      "percent": "23%",
+      "time": "412분",
+      "image": "../img/만일내가인생을다시산다면.jpg"
+    },
+    {
+      "title": "말습관을 바꾸니 인정받기 시작했다",
+      "author": "최미영 지음",
+      "percent": "22%",
+      "time": "221분",
+      "image": "../img/말습관을바꾸니인정받기시작했다.jpg"
+    },
+    {
+      "title": "지적 대화를 위한 넓고 얕은 지식 0(제로)",
+      "author": "채사장 지음",
+      "percent": "53%",
+      "time": "37분",
+      "image": "../img/지적대화를위한넓고얕은지식.jpg"
+    },
+    {
+      "title": "불편한 편의점 2",
+      "author": "김호연",
+      "percent": "20%",
+      "time": "548분",
+      "image": "../img/불편한편의점2.jpg"
+    }
+  ],
+  "original": [
+    {
+      "title": "[독점] 연분",
+      "author": "춈춈",
+      "image": "../img/연분.jpg"
+    },
+    {
+      "title": "[독점] 밀물과 썰물의 소리",
+      "author": "해화",
+      "image": "../img/밀물과썰물의소리.jpg"
+    },
+    {
+      "title": "[독점] 연애의 문장",
+      "author": "서혜은",
+      "image": "../img/연애의문장.jpg"
+    },
+    {
+      "title": "[독점] 이 사람은 망한 줄 알았는데",
+      "author": "이윤미",
+      "image": "../img/이사랑은망한줄알았는데.jpg"
+    },
+    {
+      "title": "[독점] 어쩌다, 가을",
+      "author": "반지영",
+      "image": "../img/어쩌다,가을.jpg"
+    },
+    {
+      "title": "[독점] 그 밤, 헌책방",
+      "author": "이리",
+      "image": "../img/그밤,헌책방.jpg"
+    },
+    {
+      "title": "[독점] 다시 내게",
+      "author": "서정윤",
+      "image": "../img/다시내게.jpg"
+    }
+  ]
+}
