@@ -20,15 +20,13 @@
   --h1: "Courier New", Courier, monospace;
 }
 
-/* Default CSS */
+/* ---------- Default CSS ---------- */
 body {
   font-family: var(--spo);
 }
-section {
-  margin-bottom: 80px;
-}
 
-/* Common CSS */
+/* ----------Common CSS ---------- */
+/* share-p */
 .share-p {
   text-align: center;
 }
@@ -44,6 +42,30 @@ section {
   font-size: 22px;
   letter-spacing: -0.6px;
   line-height: 1.6;
+}
+
+/* free-book & read-headset-book */
+.each-free-book,
+.each-read-headset-book {
+  width: 145px;
+  height: 215px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 5px;
+}
+.headset-icon,
+.free-icon {
+  position: absolute;
+  top: 0;
+  right: -7px;
+  width: 40px;
+}
+.completely-icon {
+  position: absolute;
+  top: 26px;
+  right: -7px;
+  width: 40px;
 }
 
 /* ---------- Header ---------- */
@@ -92,6 +114,7 @@ nav .login a {
 .welcome {
   background: linear-gradient(#f8faff 67.5%, #f0f4ff 0);
   width: 100%;
+  margin-bottom: 80px;
 }
 .welcome-inner {
   display: flex;
@@ -150,6 +173,23 @@ nav .login a {
   animation: to-left-slide 50s linear infinite;
 }
 
+/* ---------- Section: ad ---------- */
+/* ✅ */
+.ad {
+  background-color: #f7f7f7;
+  padding: 80px 0 120px;
+}
+
+/* ---------- Section: books ---------- */
+.books {
+  background-color: #ffffff;
+  padding: 80px 0 120px;
+}
+.share-p p:last-child {
+  margin-bottom: 80px;
+}
+
+/* keyframes */
 @keyframes to-left-slide {
   0% {
     background-position: left center;
