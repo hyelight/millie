@@ -89,7 +89,8 @@ body {
   right: -7px;
   width: 40px;
 }
-.completely-icon {
+.completely-icon,
+.summary-icon {
   position: absolute;
   top: 26px;
   right: -7px;
@@ -140,6 +141,23 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* label */
+.label {
+  background-repeat: no-repeat;
+  width: inherit;
+  height: 18px;
+  margin-top: 12px;
+}
+.label-mp3 {
+  background-image: url("../img/label-mp3.png");
+}
+.label-reader {
+  background-image: url("../img/label-reader.png");
+}
+.label-ai {
+  background-image: url("../img/label-ai.png");
 }
 
 /* ---------- Header ---------- */
