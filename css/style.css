@@ -83,7 +83,8 @@ body {
   background-position: center;
 }
 .headset-icon,
-.free-icon {
+.free-icon,
+.pdf-icon {
   position: absolute;
   top: 0;
   right: -7px;
@@ -293,7 +294,7 @@ nav .login a {
 /* ---------- Section: fav-books ---------- */
 .fav-books {
   margin: auto;
-  width: 1155px;
+  max-width: 1155px;
 }
 input[type="radio"] {
   display: none;
@@ -306,6 +307,7 @@ input[type="radio"] + label {
   cursor: pointer;
   border: 1px solid #242424;
   border-radius: 100px;
+  margin-right: 8px;
 }
 input[type="radio"]:checked + label {
   background-color: #242424;
@@ -326,9 +328,65 @@ input[id="tab5"]:checked ~ .con5 {
   display: block;
 }
 
-/* ---------- Section: fav-books ---------- */
+/* ---------- Section: completed ---------- */
 .completed {
-  margin-top: 80px;
+  margin-top: 32px;
+  background-color: #f7f7f7;
+  text-align: center;
+  padding-top: 63px;
+  position: relative;
+  outline: 1px solid red;
+}
+.completed .share-p {
+}
+.completed-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 55px;
+}
+.completed-bg-center {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid black;
+}
+.reading-mock-wrapper {
+}
+.reading-mock {
+  display: block;
+  margin: 0 auto;
+}
+.reading-mock-tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+}
+.reading-average {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 103px;
+  width: 417px;
+}
+.how-read img {
+  width: 200px;
+}
+.how-read-first-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 850px;
+  border: 1px solid black;
+  margin: 0 auto 61px;
+}
+.how-read-second-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1070px;
+  margin: 0 auto 40px;
 }
 
 /* keyframes */
