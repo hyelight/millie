@@ -62,7 +62,7 @@ body {
 .book-list-wrapper {
   display: flex;
   gap: 16px;
-  max-width: 1155px;
+  width: 1155px;
 }
 
 /* free-book & read-headset-book & each-book-each */
@@ -101,7 +101,12 @@ body {
 .a-book-info,
 .a-book-info-month,
 .a-book-info-audiobook,
-.a-book-info-original {
+.a-book-info-original,
+.first-info,
+.second-info,
+.third-info,
+.fourth-info,
+.fifth-info {
   width: 145px;
   letter-spacing: -0.6px;
   margin-top: 12px;
@@ -285,6 +290,47 @@ nav .login a {
   gap: 64px;
 }
 
+/* ---------- Section: fav-books ---------- */
+.fav-books {
+  margin: auto;
+  width: 1155px;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label {
+  display: inline-block;
+  padding: 6px 16px;
+  color: #242424;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #242424;
+  border-radius: 100px;
+}
+input[type="radio"]:checked + label {
+  background-color: #242424;
+  color: #fff;
+}
+label {
+  margin-bottom: 20px;
+}
+.conbox {
+  width: 1155px;
+  display: none;
+}
+input[id="tab1"]:checked ~ .con1,
+input[id="tab2"]:checked ~ .con2,
+input[id="tab3"]:checked ~ .con3,
+input[id="tab4"]:checked ~ .con4,
+input[id="tab5"]:checked ~ .con5 {
+  display: block;
+}
+
+/* ---------- Section: fav-books ---------- */
+.completed {
+  margin-top: 80px;
+}
+
 /* keyframes */
 @keyframes to-left-slide {
   0% {
@@ -302,5 +348,3 @@ nav .login a {
     background-position: left center;
   }
 }
-
-/* ---------- Section: fav-books ---------- */

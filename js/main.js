@@ -1,8 +1,8 @@
-/* ----- books section 정적 데이터 순회 ----- */
-// bestseller section
-fetch("../JSON/books.json")
+/* ----- books section, fav-books section 정적 데이터 순회 ----- */
+fetch("../json/books.json")
   .then((res) => res.json())
   .then((data) => {
+    // bestseller section
     data.bestseller.forEach((book, i) => {
       const eachBook = document.querySelectorAll(".each-book-each")[i];
       eachBook.style.backgroundImage = `url(${book.image})`;
@@ -62,6 +62,87 @@ fetch("../JSON/books.json")
         <p class="book-title">${book.title}</p>
         <p class="book-author">${book.author}</p>
       `;
+    });
+
+    // stock section
+    data.stock.forEach((book, i) => {
+      const eachBook = document.querySelectorAll(".stock")[i];
+      eachBook.style.backgroundImage = `url(${book.image})`;
+
+      const eachInfo = document.querySelectorAll(".first-info")[i];
+      eachInfo.innerHTML = `
+            <p class="book-title">${book.title}</p>
+            <p class="book-author">${book.author}</p>
+            <div class="complete-percent-time-wrapper">
+              <img src="img/icon-complete-reading.png" alt="percent와 time 정보" />
+              <span class="book-percent-time">${book.percent} &nbsp;| &nbsp;${book.time}</span>
+            </div>
+          `;
+    });
+
+    // english section
+    data.english.forEach((book, i) => {
+      const eachBook = document.querySelectorAll(".english")[i];
+      eachBook.style.backgroundImage = `url(${book.image})`;
+
+      const eachInfo = document.querySelectorAll(".second-info")[i];
+      eachInfo.innerHTML = `
+            <p class="book-title">${book.title}</p>
+            <p class="book-author">${book.author}</p>
+            <div class="complete-percent-time-wrapper">
+              <img src="img/icon-complete-reading.png" alt="percent와 time 정보" />
+              <span class="book-percent-time">${book.percent} &nbsp;| &nbsp;${book.time}</span>
+            </div>
+          `;
+    });
+
+    // classic section
+    data.classic.forEach((book, i) => {
+      const eachBook = document.querySelectorAll(".classic")[i];
+      eachBook.style.backgroundImage = `url(${book.image})`;
+
+      const eachInfo = document.querySelectorAll(".third-info")[i];
+      eachInfo.innerHTML = `
+            <p class="book-title">${book.title}</p>
+            <p class="book-author">${book.author}</p>
+            <div class="complete-percent-time-wrapper">
+              <img src="img/icon-complete-reading.png" alt="percent와 time 정보" />
+              <span class="book-percent-time">${book.percent} &nbsp;| &nbsp;${book.time}</span>
+            </div>
+          `;
+    });
+
+    // interior section
+    data.interior.forEach((book, i) => {
+      const eachBook = document.querySelectorAll(".interior")[i];
+      eachBook.style.backgroundImage = `url(${book.image})`;
+
+      const eachInfo = document.querySelectorAll(".fourth-info")[i];
+      eachInfo.innerHTML = `
+            <p class="book-title">${book.title}</p>
+            <p class="book-author">${book.author}</p>
+            <div class="complete-percent-time-wrapper">
+              <img src="img/icon-complete-reading.png" alt="percent와 time 정보" />
+              <span class="book-percent-time">${book.percent} &nbsp;| &nbsp;${book.time}</span>
+            </div>
+          `;
+    });
+
+    // diet section
+    data.diet.forEach((book, i) => {
+      console.log(data.diet);
+      const eachBook = document.querySelectorAll(".diet")[i];
+      eachBook.style.backgroundImage = `url(${book.image})`;
+
+      const eachInfo = document.querySelectorAll(".fifth-info")[i];
+      eachInfo.innerHTML = `
+            <p class="book-title">${book.title}</p>
+            <p class="book-author">${book.author}</p>
+            <div class="complete-percent-time-wrapper">
+              <img src="img/icon-complete-reading.png" alt="percent와 time 정보" />
+              <span class="book-percent-time">${book.percent} &nbsp;| &nbsp;${book.time}</span>
+            </div>
+          `;
     });
   });
 
