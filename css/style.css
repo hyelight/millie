@@ -335,7 +335,7 @@ input[id="tab5"]:checked ~ .con5 {
   text-align: center;
   padding-top: 63px;
   position: relative;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 .completed .share-p {
 }
@@ -351,9 +351,7 @@ input[id="tab5"]:checked ~ .con5 {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  border: 1px solid black;
-}
-.reading-mock-wrapper {
+  /* border: 1px solid black; */
 }
 .reading-mock {
   display: block;
@@ -363,7 +361,6 @@ input[id="tab5"]:checked ~ .con5 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -20px;
 }
 .reading-average {
   position: absolute;
@@ -379,15 +376,110 @@ input[id="tab5"]:checked ~ .con5 {
   display: flex;
   justify-content: space-between;
   max-width: 850px;
-  border: 1px solid black;
-  margin: 0 auto 61px;
+  /* border: 1px solid black; */
+  margin: 0 auto;
 }
 .how-read-second-wrapper {
   display: flex;
   justify-content: space-between;
   max-width: 1070px;
-  margin: 0 auto 40px;
+  margin-bottom: 0;
 }
+
+/* ---------- Section: price ---------- */
+.price {
+  background-color: #ffeb60;
+  margin-top: -55px;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.price-info-wrapper {
+  max-width: 1024px;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  margin-top: -20px;
+  align-items: center;
+}
+.e-book,
+.paper-book {
+  background: #fff;
+  border-radius: 16px;
+  width: 327px;
+  padding: 32px;
+  margin-right: 24px;
+}
+.paper-book {
+  margin-right: 35px;
+}
+.book-title {
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+.month-price {
+  margin-bottom: 17px;
+}
+.month,
+.year {
+  font-size: 24px;
+  font-weight: 100;
+}
+.real-price {
+  font-size: 40px;
+}
+.won {
+  font-weight: 700;
+}
+.price-p {
+  font-size: 14px;
+  color: #6f6f6f;
+  line-height: 20px;
+}
+.month,
+.year,
+.real-price,
+.won,
+.price-p {
+  letter-spacing: -0.6px;
+}
+.del-price {
+  font-size: 18px;
+  color: #6f6f6f;
+  font-weight: 100;
+  margin: 0 8px 0 24px;
+}
+.paper-book {
+}
+.discount {
+  display: flex;
+  align-items: center;
+}
+.year-price {
+  margin-bottom: 25px;
+}
+.important-price-info {
+  min-width: 278px;
+}
+.no-amount-charged,
+.an-immediate-refund {
+  display: flex;
+  align-items: center;
+}
+.price-info-divide-line {
+  width: inherit;
+  margin: 17px 0;
+}
+.discount-img {
+  width: 57px;
+}
+.price-info-img {
+  width: 72px;
+  margin-right: 25px;
+}
+
+/* ---------- Section: example ---------- */
+
+
 
 /* keyframes */
 @keyframes to-left-slide {
