@@ -468,6 +468,9 @@ input[id="tab5"]:checked ~ .con5 {
 .price-info-divide-line {
   width: inherit;
   margin: 17px 0;
+  background: #fff;
+  height: 1px;
+  border: 0;
 }
 .discount-img {
   width: 57px;
@@ -478,8 +481,52 @@ input[id="tab5"]:checked ~ .con5 {
 }
 
 /* ---------- Section: example ---------- */
-
-
+.example {
+  background-color: #fff;
+  border: 1px solid red;
+}
+.example-tab {
+  width: 100vw;
+}
+.example-tab ul {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1156px;
+  width: 100%;
+  justify-content: space-between;
+}
+.example-tab ul li {
+  align-items: center;
+  cursor: pointer;
+  width: 578px;
+  height: 105px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.example-tab ul li.active {
+  background-color: #f7f7f7;
+}
+.example-tab ul li img {
+  width: 24px;
+}
+.tab-content-box {
+  background-color: #f7f7f7;
+}
+.tab-content-wrapper {
+  max-width: 1156px;
+  margin: auto;
+}
+.tab-box{
+  display: none;
+}
+.tab-box.active{
+  display: block;
+}
+.icon-title-phrase img {
+  width: 44px;
+}
 
 /* keyframes */
 @keyframes to-left-slide {

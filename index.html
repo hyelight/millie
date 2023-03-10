@@ -745,19 +745,44 @@
         <!-- example section -->
         <section class="example">
           <div class="example-tab">
-            <input type="radio" name="ex-tabmenu" id="ex-tab1" />
-            <label for="ex-tab1">
-              <img src="./img/audiobook.png" alt="헤드셋 아이콘" />
-              <p>오디오북</p>
-            </label>
-            <input type="radio" name="ex-tabmenu" id="ex-tab2" />
-            <label for="ex-tab2">
-              <img src="./img/viewer.png" alt="뷰어 아이콘" />
-              <p>밀리 뷰어</p>
-            </label>
-
-            <div class="ex-conbox ex-con1"></div>
-            <div class="ex-conbox ex-con2"></div>
+            <ul class="tabs-ul">
+              <li class="tab-item active" data-tab="tab-1">
+                <img src="./img/audiobook.png" alt="오디오북 아이콘" />
+                <p>오디오북</p>
+              </li>
+              <li class="tab-item" data-tab="tab-2">
+                <img src="./img/viewer.png" alt="뷰어 아이콘" />
+                <p>밀리 뷰어</p>
+              </li>
+            </ul>
+            <div class="tab-content-box">
+              <div class="tab-content-wrapper">
+                <div class="tab-box active" id="tab-1">
+                  <div>
+                    <div class="icon-title-phrase">
+                      <img
+                        src="./img/audiobook-yellow-bg.png"
+                        alt="오디오북 아이콘"
+                      />
+                      <p>오디오북</p>
+                      <p>세상에서 가장 <br />교양있는 수면제</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-box" id="tab-2">
+                  <div>
+                    <div class="icon-title-phrase">
+                      <img
+                        src="./img/viewer-yellow-bg.png"
+                        alt="밀리 뷰어 아이콘"
+                      />
+                      <p>밀리 뷰어</p>
+                      <p>독서를 위한 가장 <br />완벽한 도구</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
