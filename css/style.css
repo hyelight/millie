@@ -518,10 +518,10 @@ input[id="tab5"]:checked ~ .con5 {
   max-width: 1156px;
   margin: auto;
 }
-.tab-box{
+.tab-box {
   display: none;
 }
-.tab-box.active{
+.tab-box.active {
   display: block;
 }
 .icon-title-phrase img {

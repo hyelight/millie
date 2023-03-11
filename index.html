@@ -769,7 +769,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="tab-box" id="tab-2">
+                <div class="tab-box" id="tab-2" style="border: 1px solid red">
                   <div>
                     <div class="icon-title-phrase">
                       <img
@@ -791,6 +791,20 @@
     </div>
     <script>
       AOS.init();
+    </script>
+    <!-- jQuery -->
+    <script>
+      /* ----- example section 큰 tabmenu ----- */
+      $(document).ready(function () {
+        // 탭 메뉴 클릭 이벤트
+        $("ul.tabs-ul li").click(function () {
+          var tabId = $(this).attr("data-tab");
+          $("ul.tabs-ul li").removeClass("active");
+          $(".tab-box").removeClass("active");
+          $(this).addClass("active");
+          $("#" + tabId).addClass("active");
+        });
+      });
     </script>
   </body>
 </html>
