@@ -113,3 +113,13 @@ for (let i in labels) {
 }
 
 /* ----- example section 큰 tabmenu ----- */
+$(document).ready(function () {
+  $(".tab-item").click(function () {
+    $(".tab-item").removeClass("active");
+    $(".tab-box").removeClass("active");
+
+    const clickedTab = $(this).data("tab");
+    $(this).addClass("active");
+    $("#" + clickedTab).addClass("active");
+  });
+});
