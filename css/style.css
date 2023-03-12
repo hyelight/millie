@@ -483,19 +483,19 @@ input[id="tab5"]:checked ~ .con5 {
 /* ---------- Section: example ---------- */
 .example {
   background-color: #fff;
-  border: 1px solid red;
+  width: inherit;
 }
 .example-tab {
-  width: 100vw;
+  border: 1px solid red;
 }
-.example-tab ul {
+.example-tab .tabs-ul {
   display: flex;
   margin: 0 auto;
   max-width: 1156px;
   width: 100%;
   justify-content: space-between;
 }
-.example-tab ul li {
+.example-tab .tabs-ul li {
   align-items: center;
   cursor: pointer;
   width: 578px;
@@ -505,18 +505,22 @@ input[id="tab5"]:checked ~ .con5 {
   flex-direction: column;
   justify-content: center;
 }
-.example-tab ul li.active {
+.example-tab .tabs-ul li.active {
   background-color: #f7f7f7;
 }
-.example-tab ul li img {
+.example-tab .tabs-ul li img {
   width: 24px;
 }
 .tab-content-box {
   background-color: #f7f7f7;
+  border: 1px solid blue;
+  padding: 74px 0 74px;
 }
 .tab-content-wrapper {
   max-width: 1156px;
   margin: auto;
+  border: 1px solid cyan;
+  height: 680px;
 }
 .tab-box {
   display: none;
@@ -524,8 +528,77 @@ input[id="tab5"]:checked ~ .con5 {
 .tab-box.active {
   display: block;
 }
+.float-left {
+  float: left;
+  max-width: 371px;
+  border: 1px solid red;
+  height: 680px;
+  position: relative;
+}
 .icon-title-phrase img {
   width: 44px;
+  margin-bottom: 26px;
+  margin-top: 20px;
+}
+.icon-title-phrase p:nth-child(2) {
+  font-size: 49px;
+  letter-spacing: -0.49px;
+  color: #242424;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.icon-title-phrase p:last-child {
+  font-size: 22px;
+  line-height: 35.2px;
+  letter-spacing: -0.6px;
+  color: #555555;
+}
+.down-wrapper {
+  border: 1px solid red;
+  position: absolute;
+  bottom: 90px;
+}
+.detail-phrase {
+  font-size: 22px;
+  line-height: 35.2px;
+  letter-spacing: -0.6px;
+  color: #242424;
+  margin-bottom: 24px;
+  word-break: break-all;
+}
+.detail-phrase-first {
+  font-weight: 700;
+}
+.detail-phrase-second {
+  font-weight: 500;
+}
+.click-num {
+  display: flex;
+}
+.click-num li {
+  padding: 4px 18px;
+  font-size: 14px;
+  color: #242424;
+  border-radius: 100px;
+  margin-right: 8px;
+  border: 1px solid #242424;
+  cursor: pointer;
+}
+.click-num li.active {
+  background-color: #242424;
+  color: #ffffff;
+}
+.float-right {
+  float: right;
+  border: 1px solid blueviolet;
+}
+.smart-phone {
+  background-image: url("../img/phone.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: pink;
+  width: 320px;
+  height: 680px;
 }
 
 /* keyframes */
