@@ -768,20 +768,37 @@
                       <p>세상에서 가장 <br />교양있는 수면제</p>
                     </div>
                     <div class="down-wrapper">
-                      <div class="detail-phrase">
-                        <strong class="detail-phrase-first">dfad</strong>
-                        <p class="detail-phrase-second">asd</p>
+                      <div class="detail-phrase audiobook-phrase">
+                        <strong class="detail-phrase-first"></strong>
+                        <p class="detail-phrase-second"></p>
                       </div>
                       <ul class="click-num">
-                        <li class="one active">1</li>
-                        <li class="two">2</li>
-                        <li class="three">3</li>
-                        <li class="four">4</li>
+                        <li class="one active" data-img="./img/오디오북-1.png">
+                          1
+                        </li>
+                        <li class="two" data-img="./img/오디오북-2.gif">2</li>
+                        <li class="three" data-img="./img/오디오북-3.png">3</li>
+                        <li class="four" data-img="./img/오디오북-4.png">4</li>
                       </ul>
                     </div>
                   </div>
                   <div class="float-right">
-                    <div class="smart-phone"></div>
+                    <div class="smart-phone">
+                      <div class="slide-wrapper">
+                        <div class="slide-item active">
+                          <img src="./img/오디오북-1.png" alt="오디오북 1" />
+                        </div>
+                        <div class="slide-item">
+                          <img src="./img/오디오북-2.gif" alt="오디오북 2" />
+                        </div>
+                        <div class="slide-item">
+                          <img src="./img/오디오북-3.png" alt="오디오북 3" />
+                        </div>
+                        <div class="slide-item">
+                          <img src="./img/오디오북-4.png" alt="오디오북 4" />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="tab-box" id="tab-2">
@@ -819,6 +836,15 @@
           $(this).addClass("active");
           $("#" + tabId).addClass("active");
         });
+
+        /* ----- example section 스마트폰 슬라이드 효과 ----- */
+        // 데이터 가져오기
+        fetch("../json/books.json")
+          .then((res) => res.json())
+          .then((data) => {
+            const audiobookData = data.audiobook;
+            const viewerData = data.viewer;
+          });
       });
     </script>
   </body>

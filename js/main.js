@@ -111,4 +111,3 @@ for (let i in labels) {
     bookInfo.style.marginTop = "12px";
   }
 }
-
