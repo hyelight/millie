@@ -784,18 +784,33 @@
                   </div>
                   <div class="float-right">
                     <div class="smart-phone">
-                      <div class="slide-wrapper">
-                        <div class="slide-item active">
-                          <img src="./img/오디오북-1.png" alt="오디오북 1" />
-                        </div>
-                        <div class="slide-item">
-                          <img src="./img/오디오북-2.gif" alt="오디오북 2" />
-                        </div>
-                        <div class="slide-item">
-                          <img src="./img/오디오북-3.png" alt="오디오북 3" />
-                        </div>
-                        <div class="slide-item">
-                          <img src="./img/오디오북-4.png" alt="오디오북 4" />
+                      <div class="smart-phone-inner">
+                        <img
+                          class="phone-image"
+                          src="./img/phone.png"
+                          alt="smartphone"
+                        />
+                        <div class="images-container">
+                          <img
+                            id="image1"
+                            src="./img/오디오북-1.png"
+                            alt="오디오북 1"
+                          />
+                          <img
+                            id="image2"
+                            src="./img/오디오북-2.gif"
+                            alt="오디오북 2"
+                          />
+                          <img
+                            id="image3"
+                            src="./img/오디오북-3.png"
+                            alt="오디오북 3"
+                          />
+                          <img
+                            id="image4"
+                            src="./img/오디오북-4.png"
+                            alt="오디오북 4"
+                          />
                         </div>
                       </div>
                     </div>
@@ -837,14 +852,22 @@
           $("#" + tabId).addClass("active");
         });
 
-        /* ----- example section 스마트폰 슬라이드 효과 ----- */
-        // 데이터 가져오기
-        fetch("../json/books.json")
-          .then((res) => res.json())
-          .then((data) => {
-            const audiobookData = data.audiobook;
-            const viewerData = data.viewer;
-          });
+        /* ----- 스마트폰 이미지 슬라이드 효과 ----- */
+        const clickNums = $(".click-num li");
+        const container = $(".images-container");
+        const phoneImage = $(".phone-image");
+        let containerWidth = container.width() / 4;
+
+        $(window).on("resize", () => {
+          containerWidth = container.width() / 4;
+        });
+
+        clickNums.on("click", (event) => {
+          const index = $(event.currentTarget).index();
+          container.css("transform", `translate(-${index * containerWidth}px)`);
+          clickNums.removeClass("active");
+          $(event.currentTarget).addClass("active");
+        });
       });
     </script>
   </body>
