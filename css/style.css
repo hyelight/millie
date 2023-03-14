@@ -613,7 +613,7 @@ input[id="tab5"]:checked ~ .con5 {
 .images-container {
   display: flex;
   width: 1320px;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 }
 .images-container img {
   width: 330px;

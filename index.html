@@ -897,12 +897,27 @@
           $(".tab-box").removeClass("active");
           $(this).addClass("active");
           $("#" + tabId).addClass("active");
+
+          // 클릭한 탭 메뉴의 첫 번째 번호와 이미지 활성화
+          $("#" + tabId)
+            .find(".click-num li")
+            .removeClass("active")
+            .first()
+            .addClass("active");
+
+          $("#" + tabId)
+            .find(".images-container")
+            .css("transform", "translateX(0)");
+          $("#" + tabId)
+            .find(".phone-image")
+            .removeClass("active")
+            .first()
+            .addClass("active");
         });
 
         /* ----- 스마트폰 이미지 슬라이드 효과 ----- */
         const clickNums = $(".click-num li");
         const container = $(".images-container");
-        const phoneImage = $(".phone-image");
         let containerWidth = container.width() / 4;
 
         $(window).on("resize", () => {
