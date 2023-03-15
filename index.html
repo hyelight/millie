@@ -769,8 +769,10 @@
                     </div>
                     <div class="down-wrapper">
                       <div class="detail-phrase audiobook-phrase">
-                        <strong class="detail-phrase-first"></strong>
-                        <p class="detail-phrase-second"></p>
+                        <strong
+                          class="detail-phrase-first audiobook-first"
+                        ></strong>
+                        <p class="detail-phrase-second audiobook-second"></p>
                       </div>
                       <ul class="click-num">
                         <li class="one active" data-img="./img/오디오북-1.png">
@@ -828,8 +830,10 @@
                     </div>
                     <div class="down-wrapper">
                       <div class="detail-phrase viewer-phrase">
-                        <strong class="detail-phrase-first"></strong>
-                        <p class="detail-phrase-second"></p>
+                        <strong
+                          class="detail-phrase-first viewer-first"
+                        ></strong>
+                        <p class="detail-phrase-second viewer-second"></p>
                       </div>
                       <ul class="click-num">
                         <li class="one active" data-img="./img/밀리뷰어-1.gif">
@@ -888,8 +892,34 @@
     </script>
     <!-- jQuery -->
     <script>
-      /* ----- example section 큰 tabmenu ----- */
       $(document).ready(function () {
+        /* ----- example section phrase.json ----- */
+        $.getJSON("./json/phrase.json", function (data) {
+          var audiobookPhrases = data.audiobook;
+          var viewerPhrases = data.viewer;
+
+          // 탭 클릭 시
+          $(".tab-item").click(function () {
+            var tabId = $(this).attr("data-tab");
+            var phrases = tabId === "tab-1" ? audiobookPhrases : viewerPhrases;
+
+            // 1번 버튼에 해당하는 문구 표시
+            $(".detail-phrase-first").text(phrases[0].first);
+            $(".detail-phrase-second").text(phrases[0].second);
+
+            // 번호를 클릭했을 때 해당하는 문구 표시
+            $(".click-num li").click(function () {
+              var index = $(this).index();
+              $(".detail-phrase-first").text(phrases[index].first);
+              $(".detail-phrase-second").text(phrases[index].second);
+            });
+          });
+
+          // 초기에 첫 번째 탭 활성화
+          $(".tab-item[data-tab='tab-1']").trigger("click");
+        });
+
+        /* ----- example section 큰 tabmenu ----- */
         // 탭 메뉴 클릭 이벤트
         $("ul.tabs-ul li").click(function () {
           var tabId = $(this).attr("data-tab");
@@ -914,22 +944,21 @@
             .first()
             .addClass("active");
         });
+      });
+      /* ----- 스마트폰 이미지 슬라이드 효과 ----- */
+      const clickNums = $(".click-num li");
+      const container = $(".images-container");
+      let containerWidth = container.width() / 4;
 
-        /* ----- 스마트폰 이미지 슬라이드 효과 ----- */
-        const clickNums = $(".click-num li");
-        const container = $(".images-container");
-        let containerWidth = container.width() / 4;
+      $(window).on("resize", () => {
+        containerWidth = container.width() / 4;
+      });
 
-        $(window).on("resize", () => {
-          containerWidth = container.width() / 4;
-        });
-
-        clickNums.on("click", (event) => {
-          const index = $(event.currentTarget).index();
-          container.css("transform", `translate(-${index * containerWidth}px)`);
-          clickNums.removeClass("active");
-          $(event.currentTarget).addClass("active");
-        });
+      clickNums.on("click", (event) => {
+        const index = $(event.currentTarget).index();
+        container.css("transform", `translate(-${index * containerWidth}px)`);
+        clickNums.removeClass("active");
+        $(event.currentTarget).addClass("active");
       });
     </script>
   </body>
