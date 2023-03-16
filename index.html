@@ -1105,6 +1105,19 @@
 
           $(".video-2")[0].src += "?autoplay=1";
         });
+
+        /* ----- qa section accordion ----- */
+        $(".accordion-title").click(function () {
+          $(this).next().stop().slideToggle();
+          $(this)
+            .parent()
+            .toggleClass("active")
+            .siblings()
+            .removeClass("active")
+            .find(".accordion-content")
+            .stop()
+            .slideUp();
+        });
       });
     </script>
   </body>
