@@ -9,6 +9,12 @@ function bookInfo(book) {
     </div>
   `;
 }
+function bookInfoOnlyTitleAuthor(book) {
+  return `
+    <p class="book-title">${book.title}</p>
+    <p class="book-author">${book.author}</p>
+  `;
+}
 fetch("../json/books.json")
   .then((res) => res.json())
   .then((data) => {
@@ -47,7 +53,7 @@ fetch("../json/books.json")
       eachBook.style.backgroundImage = `url(${book.image})`;
 
       const eachInfo = document.querySelectorAll(".a-book-info-original")[i];
-      eachInfo.innerHTML = bookInfo(book);
+      eachInfo.innerHTML = bookInfoOnlyTitleAuthor(book);
     });
 
     // stock section

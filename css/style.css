@@ -191,8 +191,6 @@ nav ul {
   justify-content: space-between;
   width: 100%;
 }
-ul li {
-}
 li a {
   color: rgb(36, 36, 36);
   padding: 20px 24px;
@@ -364,9 +362,6 @@ input[id="tab5"]:checked ~ .con5 {
   text-align: center;
   padding-top: 63px;
   position: relative;
-  /* outline: 1px solid red; */
-}
-.completed .share-p {
 }
 .completed-wrapper {
   position: relative;
@@ -374,13 +369,13 @@ input[id="tab5"]:checked ~ .con5 {
   margin: 0 auto;
   padding: 0 20px;
   margin-bottom: 55px;
+  padding-top: 62px;
 }
 .completed-bg-center {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  /* border: 1px solid black; */
 }
 .reading-mock {
   display: block;
@@ -405,7 +400,6 @@ input[id="tab5"]:checked ~ .con5 {
   display: flex;
   justify-content: space-between;
   max-width: 850px;
-  /* border: 1px solid black; */
   margin: 0 auto;
 }
 .how-read-second-wrapper {
@@ -413,6 +407,7 @@ input[id="tab5"]:checked ~ .con5 {
   justify-content: space-between;
   max-width: 1070px;
   margin-bottom: 0;
+  margin: auto;
 }
 
 /* ---------- Section: price ---------- */
@@ -437,13 +432,17 @@ input[id="tab5"]:checked ~ .con5 {
   width: 327px;
   padding: 32px;
   margin-right: 24px;
+  height: 309px;
 }
 .paper-book {
   margin-right: 35px;
 }
-.book-title {
+.book-title-sub {
   font-size: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 15px;
+  color: #242424;
+  font-weight: 700;
+  line-height: 28px;
 }
 .month-price {
   margin-bottom: 17px;
@@ -477,14 +476,12 @@ input[id="tab5"]:checked ~ .con5 {
   font-weight: 100;
   margin: 0 8px 0 24px;
 }
-.paper-book {
-}
 .discount {
   display: flex;
   align-items: center;
 }
 .year-price {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .important-price-info {
   min-width: 278px;
@@ -493,6 +490,12 @@ input[id="tab5"]:checked ~ .con5 {
 .an-immediate-refund {
   display: flex;
   align-items: center;
+}
+.no-amount-charged p,
+.an-immediate-refund p {
+  font-weight: 700;
+  line-height: 22px;
+  color: #242424;
 }
 .price-info-divide-line {
   width: inherit;
@@ -515,7 +518,7 @@ input[id="tab5"]:checked ~ .con5 {
   width: inherit;
 }
 .example-tab {
-  border: 1px solid red;
+  outline: 1px solid red;
 }
 .example-tab .tabs-ul {
   display: flex;
@@ -543,7 +546,7 @@ input[id="tab5"]:checked ~ .con5 {
 }
 .tab-content-box {
   background-color: #f7f7f7;
-  border: 1px solid blue;
+  outline: 1px solid blue;
   padding: 74px 0 74px;
 }
 .tab-content-wrapper {
@@ -561,7 +564,7 @@ input[id="tab5"]:checked ~ .con5 {
 .float-left {
   float: left;
   max-width: 371px;
-  border: 1px solid red;
+  outline: 1px solid red;
   height: 680px;
   position: relative;
 }
@@ -584,7 +587,7 @@ input[id="tab5"]:checked ~ .con5 {
   color: #555555;
 }
 .down-wrapper {
-  border: 1px solid red;
+  outline: 1px solid red;
   position: absolute;
   bottom: 90px;
 }
@@ -621,7 +624,7 @@ input[id="tab5"]:checked ~ .con5 {
 }
 .float-right {
   float: right;
-  border: 1px solid blueviolet;
+  outline: 1px solid blueviolet;
 }
 .smart-phone-inner {
   width: 330px;
@@ -663,6 +666,7 @@ input[id="tab5"]:checked ~ .con5 {
   display: flex;
   justify-content: space-between;
   padding: 0 204px;
+  margin: auto;
 }
 .video-container-2 {
   position: relative;

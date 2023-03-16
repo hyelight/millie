@@ -667,12 +667,32 @@
             </div>
             <div class="how-read">
               <div class="how-read-first-wrapper">
-                <img src="./img/마니아.png" alt="마니아 카드" />
-                <img src="./img/밀리픽.png" alt="밀리픽 카드" />
+                <img
+                  data-aos="zoom-in-up"
+                  data-aos-duration="800"
+                  src="./img/마니아.png"
+                  alt="마니아 카드"
+                />
+                <img
+                  data-aos="zoom-in-up"
+                  data-aos-duration="1300"
+                  src="./img/밀리픽.png"
+                  alt="밀리픽 카드"
+                />
               </div>
               <div class="how-read-second-wrapper">
-                <img src="./img/홀릭.png" alt="홀릭 카드" />
-                <img src="./img/히든.png" alt="히든 카드" />
+                <img
+                  data-aos="zoom-in-up"
+                  data-aos-duration="500"
+                  src="./img/홀릭.png"
+                  alt="홀릭 카드"
+                />
+                <img
+                  data-aos="zoom-in-up"
+                  data-aos-duration="1600"
+                  src="./img/히든.png"
+                  alt="히든 카드"
+                />
               </div>
             </div>
           </div>
@@ -691,7 +711,7 @@
           </div>
           <div class="price-info-wrapper">
             <div class="e-book">
-              <p class="book-title">전자책 정기구독</p>
+              <p class="book-title-sub">전자책 정기구독</p>
               <div class="month-price">
                 <span class="month">월</span>
                 <strong class="real-price">9,900</strong>
@@ -715,7 +735,7 @@
               </div>
             </div>
             <div class="paper-book">
-              <p class="book-title">종이책 정기구독</p>
+              <p class="book-title-sub">종이책 정기구독</p>
               <div class="month-price">
                 <span class="month">월</span>
                 <strong class="real-price">15,900</strong>
@@ -786,8 +806,12 @@
                         src="./img/audiobook-yellow-bg.png"
                         alt="오디오북 아이콘"
                       />
-                      <p>오디오북</p>
-                      <p>세상에서 가장 <br />교양있는 수면제</p>
+                      <p data-aos="fade-up" data-aos-duration="2300">
+                        오디오북
+                      </p>
+                      <p data-aos="fade-up" data-aos-duration="3000">
+                        세상에서 가장 <br />교양있는 수면제
+                      </p>
                     </div>
                     <div class="down-wrapper">
                       <div class="detail-phrase audiobook-phrase">
@@ -807,7 +831,11 @@
                     </div>
                   </div>
                   <div class="float-right">
-                    <div class="smart-phone">
+                    <div
+                      class="smart-phone"
+                      data-aos="fade-up"
+                      data-aos-duration="2000"
+                    >
                       <div class="smart-phone-inner">
                         <img
                           class="phone-image"
@@ -847,8 +875,12 @@
                         src="./img/viewer-yellow-bg.png"
                         alt="밀리 뷰어 아이콘"
                       />
-                      <p>밀리 뷰어</p>
-                      <p>독서를 위한 가장 <br />완벽한 도구</p>
+                      <p data-aos="fade-up" data-aos-duration="2300">
+                        밀리 뷰어
+                      </p>
+                      <p data-aos="fade-up" data-aos-duration="3000">
+                        독서를 위한 가장 <br />완벽한 도구
+                      </p>
                     </div>
                     <div class="down-wrapper">
                       <div class="detail-phrase viewer-phrase">
@@ -1017,9 +1049,9 @@
           <div class="first-line">
             <p>(주) 밀리의 서재</p>
             <ul class="footer-sns-icons">
-              <li class="sns-icon"></li>
-              <li class="sns-icon"></li>
-              <li class="sns-icon"></li>
+              <li class="sns-icon"><a href="#none"></a></li>
+              <li class="sns-icon"><a href="#none"></a></li>
+              <li class="sns-icon"><a href="#none"></a></li>
             </ul>
           </div>
           <div class="second-line">
@@ -1174,6 +1206,26 @@
             $(this).text("사업자 정보 펼쳐보기");
           }
         });
+      });
+
+      /* ----- 스크롤 시 opacity: 1 ----- */
+      $(document).ready(function () {
+        $(".book-list-wrapper").css("opacity", "0");
+
+        function onScroll() {
+          $(".book-list-wrapper").each(function () {
+            const targetPosition = $(this).offset().top;
+            const userPosition = $(window).scrollTop() + $(window).height();
+
+            if (userPosition > targetPosition) {
+              $(this).animate({ opacity: 1 }, 1000);
+            } else {
+              $(this).css("opacity", "0");
+            }
+          });
+        }
+
+        $(window).scroll(onScroll);
       });
     </script>
   </body>
