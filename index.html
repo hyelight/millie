@@ -1099,13 +1099,13 @@
       $(document).ready(function () {
         /* ----- example section phrase.json ----- */
         $.getJSON("./json/phrase.json", function (data) {
-          var audiobookPhrases = data.audiobook;
-          var viewerPhrases = data.viewer;
+          const audiobookPhrases = data.audiobook;
+          const viewerPhrases = data.viewer;
 
           // 탭 클릭 시
           $(".tab-item").click(function () {
-            var tabId = $(this).attr("data-tab");
-            var phrases = tabId === "tab-1" ? audiobookPhrases : viewerPhrases;
+            const tabId = $(this).attr("data-tab");
+            const phrases = tabId === "tab-1" ? audiobookPhrases : viewerPhrases;
 
             // 1번 버튼에 해당하는 문구 표시
             $(".detail-phrase-first").text(phrases[0].first);
@@ -1113,7 +1113,7 @@
 
             // 번호를 클릭했을 때 해당하는 문구 표시
             $(".click-num li").click(function () {
-              var index = $(this).index();
+              const index = $(this).index();
               $(".detail-phrase-first").text(phrases[index].first);
               $(".detail-phrase-second").text(phrases[index].second);
             });
@@ -1126,7 +1126,7 @@
         /* ----- example section 큰 tabmenu ----- */
         // 탭 메뉴 클릭 이벤트
         $("ul.tabs-ul li").click(function () {
-          var tabId = $(this).attr("data-tab");
+          const tabId = $(this).attr("data-tab");
           $("ul.tabs-ul li").removeClass("active");
           $(".tab-box").removeClass("active");
           $(this).addClass("active");
