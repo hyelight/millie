@@ -850,7 +850,34 @@ footer {
   letter-spacing: -0.6px;
 }
 
-
+/* ---------- fixed start button ---------- */
+.fixed-start-button {
+  background-color: #333333;
+  color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 12px 0px,
+    rgba(0, 0, 0, 0.08) 4px 8px 28px 0px;
+  border-radius: 60px;
+  line-height: 24px;
+  text-align: center;
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  max-width: 450px;
+  padding: 16px 0;
+  width: 450px;
+  font-size: 16px;
+  letter-spacing: -0.6px;
+  font-family: var(--app-4);
+  cursor: pointer;
+}
+.fixed-start-button {
+  font-weight: 400;
+}
+.fixed-start-button strong {
+  font-weight: 700;
+}
 
 /* ---------- keyframes ---------- */
 @keyframes to-left-slide {
