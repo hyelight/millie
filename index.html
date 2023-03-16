@@ -105,7 +105,29 @@
               일상에서 더 가깝게
             </p>
           </div>
-          <section class="ad"></section>
+          <article class="video-container-1">
+            <h3 class="sr-only">밀리의 서재 광고 영상-1</h3>
+            <iframe
+              class="video-1"
+              width="730"
+              height="411"
+              src="https://www.youtube.com/embed/u1OVbU4EdwI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <img
+              class="thumbnail-1"
+              src="./img/광고-썸네일.jpg"
+              alt="thumbnail-1"
+            />
+            <img
+              class="play-button-1"
+              src="./img/광고-플레이.png"
+              alt="play-button-1"
+            />
+          </article>
         </section>
         <!-- books section -->
         <section class="books">
@@ -883,6 +905,51 @@
             </div>
           </div>
         </section>
+        <!-- story section -->
+        <section class="story">
+          <div class="my-sub-story">
+            <div class="yellow-bg">
+              <div class="ad-and-phrase-wrapper">
+                <article class="video-container-2 story-left">
+                  <h3 class="sr-only">밀리의 서재 광고 영상-2</h3>
+                  <iframe
+                    class="video-2"
+                    width="415"
+                    height="415"
+                    src="https://www.youtube.com/embed/c-XG8k_w1LM"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                  <img
+                    class="thumbnail-2"
+                    src="./img/광고-썸네일2.png"
+                    alt="thumbnail-2"
+                  />
+                  <img
+                    class="play-button-2"
+                    src="./img/광고-플레이.png"
+                    alt="play-button-2"
+                  />
+                </article>
+                <div class="share-p story-right">
+                  <p data-aos="fade-up" data-aos-duration="2300">
+                    내돈내산 <br />밀리 구독 이야기
+                  </p>
+                  <p
+                    class="slide-share-p-second"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                  >
+                    패션 브랜드 대표부터 <br />
+                    고등학교 교사까지
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <!-- Footer -->
       <footer></footer>
@@ -959,6 +1026,25 @@
         container.css("transform", `translate(-${index * containerWidth}px)`);
         clickNums.removeClass("active");
         $(event.currentTarget).addClass("active");
+      });
+
+      $(document).ready(function () {
+        /* ----- 광고 비디오 재생 ad, story section ----- */
+        // 광고 1
+        $(".play-button-1, .thumbnail-1").click(function () {
+          $(".play-button-1").hide();
+          $(".thumbnail-1").hide();
+
+          $(".video-1")[0].src += "?autoplay=1";
+        });
+
+        // 광고2
+        $(".play-button-2, .thumbnail-2").click(function () {
+          $(".play-button-2").hide();
+          $(".thumbnail-2").hide();
+
+          $(".video-2")[0].src += "?autoplay=1";
+        });
       });
     </script>
   </body>
