@@ -698,7 +698,7 @@ input[id="tab5"]:checked ~ .con5 {
   border-radius: 20px;
   letter-spacing: -0.6px;
   max-height: 500px;
-  padding: 22px 24px;
+  padding: 18px 24px;
   width: 920px;
   cursor: pointer;
 }
@@ -737,6 +737,120 @@ input[id="tab5"]:checked ~ .con5 {
 .accordion-item .accordion-content strong {
   font-weight: 700;
 }
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #fff;
+  padding-bottom: 50px;
+}
+.lines-wrapper {
+  width: 1440px;
+  margin: auto;
+  padding: 24px 16px 32px;
+}
+.first-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 18.2px;
+  letter-spacing: -0.6px;
+}
+.first-line p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #242424;
+  display: inline-block;
+}
+.footer-sns-icons {
+  display: flex;
+  align-items: center;
+}
+.footer-sns-icons .sns-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  border-radius: 50%;
+}
+.sns-icon:not(.sns-icon:last-child) {
+  margin-right: 8px;
+}
+.sns-icon:first-child {
+  background: url("../img/img-sprites.png") -10px -54px;
+}
+.sns-icon:nth-child(2) {
+  background: url("../img/img-sprites.png") -10px -10px;
+}
+.sns-icon:last-child {
+  background: url("../img/img-sprites.png") -54px -10px;
+}
+.second-line {
+  margin-top: 21px;
+}
+.business-info {
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #a5a5a5;
+  letter-spacing: -0.6px;
+}
+.business-info.active .business-info-title::after {
+  transform: rotate(180deg);
+}
+.business-info-title {
+  line-height: 11.5px;
+  cursor: pointer;
+}
+.business-info-title::after {
+  content: "\f107";
+  font-family: fontawesome;
+  transition: 0.35s;
+  color: #a5a5a5;
+  margin-left: 5px;
+  display: inline-block;
+}
+.business-info-content {
+  line-height: 13px;
+  margin-top: 10px;
+  display: none;
+  font-style: normal;
+}
+.business-info-content span {
+  display: inline-block;
+  margin-right: 12px;
+  padding: 1px 0;
+}
+.third-line {
+  margin-top: 27px;
+  margin-bottom: 18px;
+}
+.third-line a {
+  font-size: 12px;
+  line-height: 18.2px;
+  letter-spacing: -0.6px;
+  font-weight: 400;
+  color: #6f6f6f;
+  margin-right: 12px;
+}
+.third-line a::after {
+  content: "\f105";
+  font-family: fontawesome;
+  margin-left: 5px;
+  font-size: 8px;
+}
+.third-line .strong {
+  line-height: 15.6px;
+  font-weight: 700;
+}
+.fourth-line small {
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #6f6f6f;
+  letter-spacing: -0.6px;
+}
+
+
 
 /* ---------- keyframes ---------- */
 @keyframes to-left-slide {

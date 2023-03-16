@@ -1012,7 +1012,48 @@
         </section>
       </main>
       <!-- Footer -->
-      <footer></footer>
+      <footer>
+        <div class="lines-wrapper">
+          <div class="first-line">
+            <p>(주) 밀리의 서재</p>
+            <ul class="footer-sns-icons">
+              <li class="sns-icon"></li>
+              <li class="sns-icon"></li>
+              <li class="sns-icon"></li>
+            </ul>
+          </div>
+          <div class="second-line">
+            <div class="business-info">
+              <div class="business-info-title">사업자 정보 펼쳐보기</div>
+              <address class="business-info-content">
+                <span>대표이사 : 서영택</span>
+                <span>사업자등록번호 : 423-88-00370</span>
+                <span>호스팅 제공자 : (주) 밀리의 서재</span><br /><span
+                  >통신판매업 신고번호 : 2016-서울마포-2012호</span
+                ><span
+                  >주소 : 서울특별시 마포구 양화로 45, 16층 (메세나폴리스
+                  세아타워)</span
+                ><br /><br /><span
+                  >고객정보보호 책임자 : 김태형(beiron@millie.town)</span
+                ><span>마케팅 제휴 문의 : business@millie.town</span>
+              </address>
+            </div>
+          </div>
+          <div class="third-line">
+            <a href="#none">이용약관</a>
+            <a href="#none" class="strong">개인정보처리방침</a>
+            <a href="#none">청소년보호정책</a>
+            <a href="#none">고객센터</a>
+            <a href="#none">B2B 문의</a>
+            <a href="#none">콘텐츠 제휴문의</a>
+            <a href="#none">뷰어 다운로드</a>
+            <a href="#none">회사 소개</a>
+          </div>
+          <div class="fourth-line">
+            <small>Copyright © 2022 밀리의 서재 All Rights Reserved.</small>
+          </div>
+        </div>
+      </footer>
     </div>
     <script>
       AOS.init();
@@ -1117,6 +1158,17 @@
             .find(".accordion-content")
             .stop()
             .slideUp();
+        });
+        /* ----- footer section accordion ----- */
+        $(".business-info-title").click(function () {
+          $(this).next().stop().slideToggle();
+          $(this).parent().toggleClass("active");
+
+          if ($(this).parent().hasClass("active")) {
+            $(this).text("사업자 정보 닫기");
+          } else {
+            $(this).text("사업자 정보 펼쳐보기");
+          }
         });
       });
     </script>
