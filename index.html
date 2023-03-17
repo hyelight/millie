@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>브랜드 | 밀리의 서재</title>
     <!-- Favicon -->
-    <link rel="icon" href="img/favicon.png" style="border-radius: 50%" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <!-- jQuery CDN -->
     <script
       src="https://code.jquery.com/jquery-3.6.3.js"
@@ -27,7 +27,9 @@
     <div class="container">
       <!-- Header -->
       <header>
-        <img src="img/simple-logo.png" alt="밀리의서재 로고" />
+        <a class="logo-click-to-top" href="#">
+          <img src="img/simple-logo.png" alt="밀리의서재 로고" />
+        </a>
         <nav>
           <ul>
             <li><a href="#none">기업문의</a></li>
@@ -427,16 +429,16 @@
             </p>
           </div>
           <div class="tab-content">
-              <input type="radio" id="tab1" name="tab-menu" checked />
-              <label for="tab1">주식</label>
-              <input type="radio" id="tab2" name="tab-menu" />
-              <label for="tab2">영어</label>
-              <input type="radio" id="tab3" name="tab-menu" />
-              <label for="tab3">고전</label>
-              <input type="radio" id="tab4" name="tab-menu" />
-              <label for="tab4">인테리어</label>
-              <input type="radio" id="tab5" name="tab-menu" />
-              <label for="tab5">다이어트</label>
+            <input type="radio" id="tab1" name="tab-menu" checked />
+            <label for="tab1">주식</label>
+            <input type="radio" id="tab2" name="tab-menu" />
+            <label for="tab2">영어</label>
+            <input type="radio" id="tab3" name="tab-menu" />
+            <label for="tab3">고전</label>
+            <input type="radio" id="tab4" name="tab-menu" />
+            <label for="tab4">인테리어</label>
+            <input type="radio" id="tab5" name="tab-menu" />
+            <label for="tab5">다이어트</label>
 
             <div class="conbox con1">
               <div class="nth-list fav-books-nth-list">
@@ -1097,6 +1099,11 @@
     <!-- jQuery -->
     <script>
       $(document).ready(function () {
+        /* ----- header logo click to top ----- */
+        $(".logo-click-to-top").click(function () {
+          $("html, body").animate({ scrollTop: 0 }, 400);
+        });
+
         /* ----- example section phrase.json ----- */
         $.getJSON("./json/phrase.json", function (data) {
           const audiobookPhrases = data.audiobook;
@@ -1198,7 +1205,7 @@
             .slideUp();
         });
 
-        /* ----- footer section accordion ----- */
+        /* ----- footer accordion ----- */
         $(".business-info-title").click(function () {
           $(this).next().stop().slideToggle();
           $(this).parent().toggleClass("active");
