@@ -427,19 +427,19 @@
             </p>
           </div>
           <div class="tab-content">
-            <input type="radio" id="tab1" name="tab-menu" checked />
-            <label for="tab1">주식</label>
-            <input type="radio" id="tab2" name="tab-menu" />
-            <label for="tab2">영어</label>
-            <input type="radio" id="tab3" name="tab-menu" />
-            <label for="tab3">고전</label>
-            <input type="radio" id="tab4" name="tab-menu" />
-            <label for="tab4">인테리어</label>
-            <input type="radio" id="tab5" name="tab-menu" />
-            <label for="tab5">다이어트</label>
+              <input type="radio" id="tab1" name="tab-menu" checked />
+              <label for="tab1">주식</label>
+              <input type="radio" id="tab2" name="tab-menu" />
+              <label for="tab2">영어</label>
+              <input type="radio" id="tab3" name="tab-menu" />
+              <label for="tab3">고전</label>
+              <input type="radio" id="tab4" name="tab-menu" />
+              <label for="tab4">인테리어</label>
+              <input type="radio" id="tab5" name="tab-menu" />
+              <label for="tab5">다이어트</label>
 
             <div class="conbox con1">
-              <div class="nth-list">
+              <div class="nth-list fav-books-nth-list">
                 <div class="book-list-wrapper">
                   <div>
                     <div class="each-book-each stock"></div>
@@ -1105,7 +1105,8 @@
           // 탭 클릭 시
           $(".tab-item").click(function () {
             const tabId = $(this).attr("data-tab");
-            const phrases = tabId === "tab-1" ? audiobookPhrases : viewerPhrases;
+            const phrases =
+              tabId === "tab-1" ? audiobookPhrases : viewerPhrases;
 
             // 1번 버튼에 해당하는 문구 표시
             $(".detail-phrase-first").text(phrases[0].first);
@@ -1149,6 +1150,7 @@
             .addClass("active");
         });
       });
+
       /* ----- 스마트폰 이미지 슬라이드 효과 ----- */
       const clickNums = $(".click-num li");
       const container = $(".images-container");
@@ -1195,6 +1197,7 @@
             .stop()
             .slideUp();
         });
+
         /* ----- footer section accordion ----- */
         $(".business-info-title").click(function () {
           $(this).next().stop().slideToggle();

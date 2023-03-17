@@ -47,6 +47,7 @@ body {
 /* 책 가운데 정렬 */
 .nth-list {
   margin: auto;
+  padding: 0 24px;
 }
 
 /* books-section-each-title */
@@ -55,14 +56,14 @@ body {
   color: rgb(36, 36, 36);
   font-weight: 700;
   letter-spacing: -0.6px;
-  margin-bottom: 35px;
+  margin-bottom: 16px;
 }
 
 /* book-list-wrapper */
 .book-list-wrapper {
   display: flex;
   gap: 16px;
-  width: 1155px;
+  padding-top: 16px;
 }
 
 /* free-book & read-headset-book & each-book-each */
@@ -210,7 +211,7 @@ nav .login a {
 .welcome {
   background: linear-gradient(#f8faff 67.5%, #f0f4ff 0);
   width: 100%;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
 }
 .welcome-inner {
   display: flex;
@@ -240,24 +241,27 @@ nav .login a {
 
 /* ---------- Section: slide ---------- */
 .slide {
-  padding: 0 24px;
+  padding: 80px 24px;
 }
 .slide-share-p-second {
   margin-bottom: 24px;
 }
 .book-lists {
   width: 100%;
-  height: 700px;
+  /* height: 700px; */
+  /* padding: 48px 0; */
   overflow: hidden;
 }
 .book-lists li {
   width: 100%;
   height: 183px;
-  margin: 24px 0;
+}
+.book-lists li:not(.third-books) {
+  margin-bottom: 24px;
 }
 .first-books {
   background: 0% 0% / cover repeat-x url("../img/slide01.png");
-  margin-top: 48px;
+  /* margin-top: 48px; */
   animation: to-left-slide 50s linear infinite;
 }
 .second-books {
@@ -272,7 +276,7 @@ nav .login a {
 /* ---------- Section: ad, story ---------- */
 .ad {
   background-color: #f7f7f7;
-  padding: 80px 0 120px;
+  padding: 80px 0px 120px;
 }
 .video-container-1 {
   position: relative;
@@ -308,7 +312,7 @@ nav .login a {
 /* ---------- Section: books ---------- */
 .books {
   background-color: #ffffff;
-  padding: 80px 0 120px;
+  padding: 80px 0 117px;
 }
 .share-p p:last-child {
   margin-bottom: 80px;
@@ -332,9 +336,12 @@ input[type="radio"] + label {
   color: #242424;
   font-size: 14px;
   cursor: pointer;
-  border: 1px solid #242424;
+  outline: 1px solid #242424;
   border-radius: 100px;
   margin-right: 8px;
+}
+input[type="radio"]:first-child + label {
+  margin-left: 24px;
 }
 input[type="radio"]:checked + label {
   background-color: #242424;
@@ -344,7 +351,7 @@ label {
   margin-bottom: 20px;
 }
 .conbox {
-  width: 1155px;
+  /* width: 1155px; */
   display: none;
 }
 input[id="tab1"]:checked ~ .con1,
