@@ -421,8 +421,7 @@ input[id="tab5"]:checked ~ .con5 {
 .price {
   background-color: #ffeb60;
   margin-top: -55px;
-  padding-top: 80px;
-  padding-bottom: 100px;
+  padding: 80px 2% 100px;
 }
 .price-info-wrapper {
   max-width: 1024px;
@@ -492,6 +491,8 @@ input[id="tab5"]:checked ~ .con5 {
 }
 .important-price-info {
   min-width: 278px;
+  margin: auto;
+  padding: 16px 0;
 }
 .no-amount-charged,
 .an-immediate-refund {
@@ -535,14 +536,15 @@ input[id="tab5"]:checked ~ .con5 {
   justify-content: space-between;
 }
 .example-tab .tabs-ul li {
-  align-items: center;
-  cursor: pointer;
-  width: 578px;
-  height: 105px;
-  text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  cursor: pointer;
+  width: 578px;
+  /* height: 105px; */
+  padding: 30px 0;
+  text-align: center;
   font-size: 14px;
 }
 .example-tab .tabs-ul li.active {
@@ -554,7 +556,7 @@ input[id="tab5"]:checked ~ .con5 {
 .tab-content-box {
   background-color: #f7f7f7;
   outline: 1px solid blue;
-  padding: 74px 0 74px;
+  padding: 74px 8%;
 }
 .tab-content-wrapper {
   max-width: 1156px;
@@ -564,6 +566,7 @@ input[id="tab5"]:checked ~ .con5 {
 }
 .tab-box {
   display: none;
+  overflow: hidden;
 }
 .tab-box.active {
   display: block;
@@ -571,14 +574,16 @@ input[id="tab5"]:checked ~ .con5 {
 .float-left {
   float: left;
   max-width: 371px;
-  outline: 1px solid red;
+  outline: 1px solid green;
   height: 680px;
   position: relative;
+}
+.icon-title-phrase{
+  margin-top: 80px;
 }
 .icon-title-phrase img {
   width: 44px;
   margin-bottom: 26px;
-  margin-top: 20px;
 }
 .icon-title-phrase p:nth-child(2) {
   font-size: 49px;
@@ -594,7 +599,7 @@ input[id="tab5"]:checked ~ .con5 {
   color: #555555;
 }
 .down-wrapper {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   position: absolute;
   bottom: 90px;
 }
@@ -635,7 +640,6 @@ input[id="tab5"]:checked ~ .con5 {
 }
 .smart-phone-inner {
   width: 330px;
-  height: 680px;
   position: relative;
   overflow: hidden;
   border-radius: 53px;

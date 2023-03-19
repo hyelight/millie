@@ -1161,10 +1161,20 @@
       /* ----- 스마트폰 이미지 슬라이드 효과 ----- */
       const clickNums = $(".click-num li");
       const container = $(".images-container");
-      let containerWidth = container.width() / 4;
+      let containerWidth;
+
+      function updateContainerWidth() {
+        if ($(window).width() <= 768) {
+          containerWidth = container.width();
+        } else {
+          containerWidth = container.width() / 4;
+        }
+      }
+
+      updateContainerWidth();
 
       $(window).on("resize", () => {
-        containerWidth = container.width() / 4;
+        updateContainerWidth();
       });
 
       clickNums.on("click", (event) => {

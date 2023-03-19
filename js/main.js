@@ -104,7 +104,7 @@ fetch("../json/books.json")
 
 /* ----- 바로 전 태그의 class가 label => 모든 a-book-info 유형 class 태그 margin-top 변경 ----- */
 const labels = document.querySelectorAll(".label");
-for (let i in labels) {
+for (let i = 0; i < labels.length; i++) {
   const bookInfo = labels[i].nextElementSibling;
   if (
     bookInfo.classList.contains("a-book-info") ||

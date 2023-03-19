@@ -3,7 +3,6 @@
   .share-p p:first-child {
     font-size: 32px;
     line-height: 42px;
-    margin-bottom: 16px;
   }
   .share-p p:last-child {
     font-size: 16px;
@@ -72,7 +71,127 @@
     margin-top: 64px;
   }
   input[type="radio"] + label {
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
+  }
+  input[type="radio"][id="tab5"] + label {
+    margin-left: 24px;
   }
 
+  /* ---------- Section: completed ---------- */
+  .completed {
+    margin-top: 16px;
+    padding-top: 80px;
+  }
+
+  /* ---------- Section: price ---------- */
+  .price {
+    padding: 48px 24px;
+  }
+  .share-p p:first-child {
+    margin-bottom: 16px;
+  }
+  .price-info-wrapper {
+    margin: 0;
+    gap: 24px;
+  }
+  .e-book,
+  .paper-book {
+    margin: auto;
+  }
+  .important-price-info {
+    margin: auto;
+    width: 100%;
+    padding: 16px 7.5px 0;
+  }
+
+  /* ---------- Section: example ---------- */
+  .tab-content-box {
+    padding: 32px 0;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+  }
+  .tab-content-wrapper {
+    min-height: 787px;
+  }
+  .icon-title-phrase {
+    margin-top: 0;
+    text-align: center;
+    /* position: relative; */
+    /* z-index: 2; */
+  }
+  .icon-title-phrase img {
+    margin-bottom: 0;
+  }
+  .icon-title-phrase p:nth-child(2) {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .icon-title-phrase p:last-child {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 18px;
+  }
+  .tab-box {
+    /* overflow:auto; */
+    min-height: inherit;
+  }
+  .float-left {
+    float: none;
+    min-height: inherit;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative; */
+    /* width: 100%; */
+    /* height: 0; */
+  }
+  .float-right {
+    float: none;
+  }
+  .down-wrapper {
+    /* margin: auto; */
+    position: static;
+    text-align: center;
+    max-width: 301px;
+    /* margin-top: 100px; */
+    /* bottom: 0; */
+    /* width: 100%; */
+  }
+  .detail-phrase {
+    width: 100%;
+    font-size: 18px;
+    line-height: 29px;
+    margin-top: 32px;
+  }
+  .click-num {
+    /* margin: auto; */
+    justify-content: center;
+  }
+  .smart-phone-inner {
+    /* display: none; */
+    /* position: absolute; */
+    max-width: 223px;
+    max-height: 472px;
+    margin: auto;
+    border-radius: 35px;
+    /* position: absolute; */
+    /* top: 0; */
+    /* z-index: 1; */
+    /* left: 50%; */
+    top: 130%;
+    transform: translateY(-130%);
+    /* transform: translate(-50%, -106%); */
+    /* top: 50%; */
+  }
+  .images-container {
+    width: 100%;
+    height: 100%;
+  }
+  .images-container img {
+    width: 100%;
+    height: 100%;
+  }
 }
