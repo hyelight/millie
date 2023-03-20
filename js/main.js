@@ -38,9 +38,7 @@ fetch("../json/books.json")
 
     // audiobest section
     data.audiobest.forEach((book, i) => {
-      const eachBook = document.querySelectorAll(".each-book-each-audiobest")[
-        i
-      ];
+      const eachBook = document.querySelectorAll(".each-book-each-audiobest")[i];
       eachBook.style.backgroundImage = `url(${book.image})`;
 
       const eachInfo = document.querySelectorAll(".a-book-info-audiobook")[i];

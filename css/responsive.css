@@ -130,17 +130,34 @@
     margin-top: 16px;
     padding-top: 80px;
   }
+  .completed-wrapper {
+    padding-top: 680px;
+  }
   .reading-average {
     max-width: 297px;
   }
   .reading-mock {
     max-width: 300px;
   }
-  .how-read {
+  .mania {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  .millie-pick {
+    position: absolute;
+    top: -1%;
+    right: 8%;
   }
   .holic {
+    position: absolute;
+    top: 33%;
+    left: -2%;
   }
   .hidden {
+    position: absolute;
+    right: 2%;
+    top: 30%;
   }
 
   /* ---------- Section: price ---------- */
