@@ -137,7 +137,7 @@ $(document).ready(function () {
       $(".detail-phrase-first").text(phrases[0].first);
       $(".detail-phrase-second").text(phrases[0].second);
 
-      // 번호를 클릭했을 때 해당하는 문구 표시
+      // 번호 클릭했을 때 해당하는 문구 표시
       $(".click-num li").click(function () {
         const index = $(this).index();
         $(".detail-phrase-first").text(phrases[index].first);
@@ -278,7 +278,7 @@ $(document).ready(function () {
     }
   });
 
-  // 마우스를 놓으면 스크롤 해제
+  // 마우스 놓으면 스크롤 해제
   $(document).on("mouseup", function () {
     startX = null;
   });

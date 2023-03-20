@@ -8,52 +8,6 @@
   }
 }
 
-@media (max-width: 1150px) {
-  /* ---------- Section: welcome ---------- */
-  .welcome {
-    width: 100vw;
-    min-height: 950px;
-    position: relative;
-  }
-  .welcome-inner {
-    /* padding-bottom: 100px; */
-  }
-  .main-words {
-    position: absolute;
-    top: 80%;
-    left: 10%;
-    transform: translate(-10%, -70%);
-    width: 60%;
-    height: 100%;
-    /* margin-top: 70px; */
-  }
-  .welcome-main-ment {
-    width: 100%;
-    max-width: 315px;
-  }
-  .welcome-main-millie {
-    display: none;
-  }
-  .welcome-main-bg {
-    position: absolute;
-    top: 30%;
-    left: 70%;
-    transform: translate(-70%, -15%);
-    max-width: 700px;
-    height: 100%;
-    /* padding-top:100px; */
-  }
-
-  /* ---------- Section: books, fav-books ---------- */
-  .book-list-wrapper {
-    overflow-x: auto;
-    -ms-overflow-style: none;
-  }
-  .book-list-wrapper::-webkit-scrollbar {
-    display: none;
-  }
-}
-
 @media (max-width: 768px) {
   /* ---------- Common CSS ---------- */
   .share-p p:first-child {
@@ -67,7 +21,6 @@
   }
 
   /* ---------- Header ---------- */
-  /* ✅ */
   nav ul li:not(.login) {
     display: none;
   }
@@ -76,18 +29,13 @@
     min-height: 650px;
     position: relative;
   }
-  .welcome-inner {
-    /* padding-top: 150px; */
-  }
   .welcome-main-ment {
     max-width: 215px;
     margin-top: 30px;
   }
 
   .welcome-main-bg {
-    /* top: 10%; */
     max-width: 440px;
-    /* margin-top: 100px; */
     top: 30%;
     left: 100%;
     transform: translate(-100%, -15%);
@@ -271,8 +219,6 @@
   }
   .accordion-item .accordion-title {
     font-size: 16px;
-    /* max-width: 250px; */
-    /* white-space: pre-wrap; */
   }
   .accordion-item .accordion-content {
     font-size: 14px;
@@ -314,5 +260,46 @@
   }
   .story-right.share-p p:last-child {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 1150px) {
+  /* ---------- Section: welcome ---------- */
+  .welcome {
+    width: 100vw;
+    min-height: 950px;
+    position: relative;
+  }
+  .main-words {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    transform: translate(-10%, -70%);
+    width: 60%;
+    height: 100%;
+  }
+  .welcome-main-ment {
+    width: 100%;
+    max-width: 315px;
+  }
+  .welcome-main-millie {
+    display: none;
+  }
+  .welcome-main-bg {
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translate(-70%, -15%);
+    max-width: 700px;
+    height: 100%;
+  }
+
+  /* ---------- Section: books, fav-books ---------- */
+  .book-list-wrapper {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+  }
+  .book-list-wrapper::-webkit-scrollbar {
+    display: none;
   }
 }
