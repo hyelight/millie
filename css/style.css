@@ -522,9 +522,6 @@ input[id="tab5"]:checked ~ .con5 {
   background-color: #fff;
   width: inherit;
 }
-.example-tab {
-  outline: 1px solid red;
-}
 .example-tab .tabs-ul {
   display: flex;
   margin: 0 auto;
@@ -551,13 +548,11 @@ input[id="tab5"]:checked ~ .con5 {
 }
 .tab-content-box {
   background-color: #f7f7f7;
-  outline: 1px solid blue;
   padding: 74px 8%;
 }
 .tab-content-wrapper {
   max-width: 1156px;
   margin: auto;
-  border: 1px solid cyan;
   height: 680px;
 }
 .tab-box {
@@ -570,7 +565,6 @@ input[id="tab5"]:checked ~ .con5 {
 .float-left {
   float: left;
   max-width: 371px;
-  outline: 1px solid green;
   height: 680px;
   position: relative;
 }
@@ -631,7 +625,6 @@ input[id="tab5"]:checked ~ .con5 {
 }
 .float-right {
   float: right;
-  outline: 1px solid blueviolet;
 }
 .smart-phone-inner {
   width: 330px;
