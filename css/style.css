@@ -313,6 +313,10 @@ nav .login a {
 .books {
   background-color: #ffffff;
   padding: 80px 0 117px;
+  overflow: hidden;
+  /* width: 100%; */
+  margin: auto;
+  max-width: 1155px;
 }
 .share-p p:last-child {
   margin-bottom: 80px;
@@ -346,9 +350,6 @@ input[type="radio"]:first-child + label {
 input[type="radio"]:checked + label {
   background-color: #242424;
   color: #fff;
-}
-label {
-  margin-bottom: 20px;
 }
 .conbox {
   /* width: 1155px; */
@@ -578,7 +579,7 @@ input[id="tab5"]:checked ~ .con5 {
   height: 680px;
   position: relative;
 }
-.icon-title-phrase{
+.icon-title-phrase {
   margin-top: 80px;
 }
 .icon-title-phrase img {
@@ -670,14 +671,17 @@ input[id="tab5"]:checked ~ .con5 {
 }
 .yellow-bg {
   background-image: url(../img/review-bg.png);
+  background-size: cover;
   padding: 80px 204px 115px;
+  margin: auto;
 }
 .ad-and-phrase-wrapper {
-  width: 1440px;
+  max-width: 1440px;
   display: flex;
   justify-content: space-between;
   padding: 0 204px;
   margin: auto;
+  filter: drop-shadow(10px 10px 40px rgba(0, 0, 0, 0.1));
 }
 .video-container-2 {
   position: relative;
@@ -696,11 +700,14 @@ input[id="tab5"]:checked ~ .con5 {
   background-color: #ffeb60;
 }
 .qa-content-wrapper {
-  padding: 80px 24px 84px;
-  width: 1440px;
+  padding: 80px 10% 84px;
+  max-width: 1440px;
   margin: auto;
   display: flex;
   justify-content: center;
+}
+.qa-content {
+  width: 100%;
 }
 .qa-content p {
   text-align: center;
@@ -713,7 +720,7 @@ input[id="tab5"]:checked ~ .con5 {
   letter-spacing: -0.6px;
   max-height: 500px;
   padding: 18px 24px;
-  width: 920px;
+  width: 100%;
   cursor: pointer;
 }
 .accordion-item:not(:last-child) {
@@ -758,7 +765,7 @@ footer {
   padding-bottom: 50px;
 }
 .lines-wrapper {
-  width: 1440px;
+  max-width: 1440px;
   margin: auto;
   padding: 24px 16px 32px;
 }
@@ -875,12 +882,13 @@ footer {
   text-align: center;
   position: fixed;
   bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
+  /* margin: auto; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
   z-index: 999;
   max-width: 450px;
+  width: 90%;
   padding: 16px 0;
-  width: 450px;
   font-size: 16px;
   letter-spacing: -0.6px;
   font-family: var(--app-4);
