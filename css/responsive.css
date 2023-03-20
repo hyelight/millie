@@ -7,17 +7,53 @@
     margin-bottom: 20px;
   }
 }
+
 @media (max-width: 1150px) {
+  /* ---------- Section: welcome ---------- */
+  .welcome {
+    width: 100vw;
+    min-height: 950px;
+    position: relative;
+  }
+  .welcome-inner {
+    /* padding-bottom: 100px; */
+  }
+  .main-words {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    transform: translate(-10%, -70%);
+    width: 60%;
+    height: 100%;
+    /* margin-top: 70px; */
+  }
+  .welcome-main-ment {
+    width: 100%;
+    max-width: 315px;
+  }
+  .welcome-main-millie {
+    display: none;
+  }
+  .welcome-main-bg {
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translate(-70%, -15%);
+    max-width: 700px;
+    height: 100%;
+    /* padding-top:100px; */
+  }
+
   /* ---------- Section: books, fav-books ---------- */
   .book-list-wrapper {
-    /* width: 100%; */
     overflow-x: auto;
-    /* -webkit-overflow-scrolling: touch; */
-    /* scroll-snap-type: x mandatory; */
-    /* scroll-padding: 0 8px; */
-    /* white-space: nowrap; */
+    -ms-overflow-style: none;
+  }
+  .book-list-wrapper::-webkit-scrollbar {
+    display: none;
   }
 }
+
 @media (max-width: 768px) {
   /* ---------- Common CSS ---------- */
   .share-p p:first-child {
@@ -37,30 +73,29 @@
   }
   /* ---------- Section: welcome ---------- */
   .welcome {
-    height: 645px;
-    margin-bottom: 48px;
+    min-height: 650px;
+    position: relative;
   }
   .welcome-inner {
-    padding-top: 100px;
+    /* padding-top: 150px; */
   }
   .welcome-main-ment {
-    width: 215px;
-    /* margin-left: 0.5rem; */
+    max-width: 215px;
+    margin-top: 30px;
   }
-  .welcome-main-millie {
-    display: none;
-  }
+
   .welcome-main-bg {
-    /* width: 470px; */
-    width: 100vw;
-    margin-left: -250px;
-    margin-top: 40px;
+    /* top: 10%; */
+    max-width: 440px;
+    /* margin-top: 100px; */
+    top: 30%;
+    left: 100%;
+    transform: translate(-100%, -15%);
   }
 
   /* ---------- Section: slide ---------- */
   .slide {
     padding: 48px 24px;
-    margin-top: -48px;
   }
 
   /* ---------- Section: ad ---------- */
@@ -81,9 +116,6 @@
   .book-list-wrapper {
     overflow-x: auto;
   }
-  .each-book-each {
-    /* scroll-snap-align: center; */
-  }
   .list-gap {
     gap: 31px;
   }
@@ -92,14 +124,23 @@
   .fav-books {
     margin-top: 64px;
   }
-  input[type="radio"] + label {
-    /* margin-bottom: 0; */
-  }
 
   /* ---------- Section: completed ---------- */
   .completed {
     margin-top: 16px;
     padding-top: 80px;
+  }
+  .reading-average {
+    max-width: 297px;
+  }
+  .reading-mock {
+    max-width: 300px;
+  }
+  .how-read {
+  }
+  .holic {
+  }
+  .hidden {
   }
 
   /* ---------- Section: price ---------- */
