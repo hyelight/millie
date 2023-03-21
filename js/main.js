@@ -38,7 +38,9 @@ fetch("../json/books.json")
 
     // audiobest section
     data.audiobest.forEach((book, i) => {
-      const eachBook = document.querySelectorAll(".each-book-each-audiobest")[i];
+      const eachBook = document.querySelectorAll(".each-book-each-audiobest")[
+        i
+      ];
       eachBook.style.backgroundImage = `url(${book.image})`;
 
       const eachInfo = document.querySelectorAll(".a-book-info-audiobook")[i];
@@ -281,5 +283,32 @@ $(document).ready(function () {
   // 마우스 놓으면 스크롤 해제
   $(document).on("mouseup", function () {
     startX = null;
+  });
+
+  /* ----- header section hamburger toggle ----- */
+  const $hamburgerBtn = $(
+    '<button class="hamburger-menu" type="button"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>'
+  );
+  $("header").prepend($hamburgerBtn);
+
+  $("nav ul").append(
+    '<li class="customer-service"><a href="#none">고객센터</a></li>'
+  );
+
+  $(window).on("resize", function () {
+    $("nav ul .customer-service").toggle($(window).width() <= 768);
+    })
+    .resize();
+
+  $hamburgerBtn.on("click", function () {
+    $(this).toggleClass("open");
+    $("nav ul").stop().slideToggle();
+  });
+
+  $(window).on("resize", function () {
+    if ($(window).width() > 768) {
+      $hamburgerBtn.removeClass("open");
+      $("nav ul").removeAttr("style");
+    }
   });
 });
