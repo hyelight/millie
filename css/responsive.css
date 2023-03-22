@@ -21,11 +21,18 @@
   }
 
   /* ---------- Header ---------- */
+  header {
+    min-height: 65px;
+  }
   nav .login {
     margin-left: 0;
+    position: absolute;
+    right: 20px;
   }
   .logo-click-to-top {
-    margin: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .hamburger-menu {
     display: none;
@@ -75,9 +82,6 @@
   nav ul li {
     text-align: center;
     padding: 15px 0;
-  }
-  nav.open ul {
-    display: flex;
   }
 
   /* ---------- Section: welcome ---------- */

@@ -362,7 +362,6 @@ input[type="radio"]:checked + label {
   color: #fff;
 }
 .conbox {
-  /* width: 1155px; */
   display: none;
 }
 input[id="tab1"]:checked ~ .con1,
@@ -452,24 +451,27 @@ input[id="tab5"]:checked ~ .con5 {
 }
 .book-title-sub {
   font-size: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
   color: #242424;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 130%;
 }
 .month-price {
-  margin-bottom: 17px;
+  margin-bottom: 14px;
 }
 .month,
 .year {
   font-size: 24px;
   font-weight: 100;
+  line-height: 130%;
 }
 .real-price {
   font-size: 40px;
+  line-height: 100%;
 }
 .won {
   font-weight: 700;
+  line-height: 130%;
 }
 .price-p {
   font-size: 14px;
@@ -488,13 +490,14 @@ input[id="tab5"]:checked ~ .con5 {
   color: #6f6f6f;
   font-weight: 100;
   margin: 0 8px 0 24px;
+  line-height: 22px;
 }
 .discount {
   display: flex;
   align-items: center;
 }
 .year-price {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .important-price-info {
   min-width: 278px;
