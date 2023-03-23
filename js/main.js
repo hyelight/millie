@@ -15,7 +15,7 @@ function bookInfoOnlyTitleAuthor(book) {
     <p class="book-author">${book.author}</p>
   `;
 }
-fetch("../json/books.json")
+fetch("/json/books.json")
   .then((res) => res.json())
   .then((data) => {
     // bestseller section

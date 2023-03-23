@@ -1,23 +1,9 @@
 /* Fontawesome 6.3.0 */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
 
-/* XEICON CDN */
-@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
-
 :root {
   /* Fonts */
   --spo: "Spoqa Han Sans Neo", "sans-serif";
-  --app-1: "AppleSDGothicNeoT00", sans-serif;
-  --app-2: "AppleSDGothicNeoUL00", sans-serif;
-  --app-3: "AppleSDGothicNeoL00", sans-serif;
-  --app-4: "AppleSDGothicNeoR00", sans-serif;
-  --app-5: "AppleSDGothicNeoM00", sans-serif;
-  --app-6: "AppleSDGothicNeoSB00", sans-serif;
-  --app-7: "AppleSDGothicNeoB00", sans-serif;
-  --app-8: "AppleSDGothicNeoEB00", sans-serif;
-  --app-9: "AppleSDGothicNeoH00", sans-serif;
-  --mal: "Malgun Gothic", sans-serif;
-  --h1: "Courier New", Courier, monospace;
 }
 
 /* ---------- Default CSS ---------- */
@@ -796,6 +782,7 @@ footer {
   height: 24px;
   display: block;
   border-radius: 50%;
+  cursor: pointer;
 }
 .sns-icon:not(.sns-icon:last-child) {
   margin-right: 8px;
@@ -894,7 +881,7 @@ footer {
   padding: 16px 0;
   font-size: 16px;
   letter-spacing: -0.6px;
-  font-family: var(--app-4);
+  font-family: var(--spo);
   cursor: pointer;
 }
 .fixed-start-button {
