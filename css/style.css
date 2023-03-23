@@ -665,6 +665,7 @@ input[id="tab5"]:checked ~ .con5 {
 .images-container video {
   width: 330px;
   height: 680px;
+  display: inline-block;
 }
 
 /* ---------- Section: story ---------- */
