@@ -16,7 +16,7 @@ function bookInfoOnlyTitleAuthor(book) {
   `;
 }
 
-fetch("./json/books.json")
+fetch("json/books.json")
   .then((res) => res.json())
   .then((data) => {
     // bestseller section
@@ -127,7 +127,7 @@ $(document).ready(function () {
   });
 
   /* ----- example section phrase.json ----- */
-  $.getJSON("./json/phrase.json", function (data) {
+  $.getJSON("json/phrase.json", function (data) {
     const audiobookPhrases = data.audiobook;
     const viewerPhrases = data.viewer;
 
