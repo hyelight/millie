@@ -191,7 +191,7 @@ header img {
   height: 24px;
   cursor: pointer;
 }
-nav{
+nav {
   display: flex;
   align-items: center;
 }
@@ -214,7 +214,7 @@ nav .login {
   margin-left: 24px;
   cursor: pointer;
 }
-.hamburger-menu{
+.hamburger-menu {
   display: none;
 }
 
@@ -644,7 +644,6 @@ input[id="tab5"]:checked ~ .con5 {
   position: relative;
   overflow: hidden;
   border-radius: 53px;
-  filter: drop-shadow(10px 10px 40px rgba(0, 0, 0, 0.1));
 }
 .phone-image {
   width: 100%;
@@ -660,6 +659,10 @@ input[id="tab5"]:checked ~ .con5 {
   transition: transform 0.25s ease-in-out;
 }
 .images-container img {
+  width: 330px;
+  height: 680px;
+}
+.images-container video {
   width: 330px;
   height: 680px;
 }
