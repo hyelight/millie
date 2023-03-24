@@ -254,16 +254,16 @@ nav .login {
   margin-bottom: 24px;
 }
 .first-books {
-  background: 0% 0% / cover repeat-x url("../img/slide01.png");
+  background: 0% 0% / cover repeat-x url("../img/slide01.webp");
   /* margin-top: 48px; */
   animation: to-left-slide 50s linear infinite;
 }
 .second-books {
-  background: 0% 0% / cover repeat-x url("../img/slide02.png");
+  background: 0% 0% / cover repeat-x url("../img/slide02.webp");
   animation: to-right-slide 50s linear infinite;
 }
 .third-books {
-  background: 0% 0% / cover repeat-x url("../img/slide03.png");
+  background: 0% 0% / cover repeat-x url("../img/slide03.webp");
   animation: to-left-slide 50s linear infinite;
 }
 
@@ -660,7 +660,7 @@ input[id="tab5"]:checked ~ .con5 {
   padding-top: 160px;
 }
 .yellow-bg {
-  background-image: url(../img/review-bg.png);
+  background-image: url(../img/review-bg.webp);
   background-size: cover;
   padding: 80px 204px 115px;
   margin: auto;

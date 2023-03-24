@@ -121,6 +121,12 @@ for (let i = 0; i < labels.length; i++) {
 
 /* ------- jQuery ------- */
 $(document).ready(function () {
+  /* ----- 이미지 최적화를 위한 loading="lazy" 추가 ----- */
+  const images = document.querySelectorAll("img");
+  images.forEach((image) => {
+    image.setAttribute("loading", "lazy");
+  });
+
   /* ----- header logo click to top ----- */
   $(".logo-click-to-top").click(function () {
     $("html, body").animate({ scrollTop: 0 }, 400);
@@ -296,8 +302,9 @@ $(document).ready(function () {
     '<li class="customer-service"><a href="#none">고객센터</a></li>'
   );
 
-  $(window).on("resize", function () {
-    $("nav ul .customer-service").toggle($(window).width() <= 768);
+  $(window)
+    .on("resize", function () {
+      $("nav ul .customer-service").toggle($(window).width() <= 768);
     })
     .resize();
 
