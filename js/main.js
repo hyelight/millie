@@ -1,106 +1,57 @@
 /* ----- books section, fav-books section 정적 데이터 순회 ----- */
-function bookInfo(book) {
+function bookInfo(book, includePercentTime = true) {
+  const timeInfo = includePercentTime ? `
+      <div class="complete-percent-time-wrapper">
+        <img src="img/icon-complete-reading.png" alt="percent와 time 정보" />
+        <span class="book-percent-time">${book.percent} &nbsp;| &nbsp;${book.time}</span>
+      </div>
+    ` : '';
   return `
     <p class="book-title">${book.title}</p>
     <p class="book-author">${book.author}</p>
-    <div class="complete-percent-time-wrapper">
-      <img src="img/icon-complete-reading.png" alt="percent와 time 정보" />
-      <span class="book-percent-time">${book.percent} &nbsp;| &nbsp;${book.time}</span>
-    </div>
+    ${timeInfo}
   `;
 }
-function bookInfoOnlyTitleAuthor(book) {
-  return `
-    <p class="book-title">${book.title}</p>
-    <p class="book-author">${book.author}</p>
-  `;
+
+function putIntoBookFrame(books, bookImages, infoOfBooks, infoIncludeOrNot) {
+  books.forEach((book, i) => {
+    const eachBook = document.querySelectorAll(bookImages)[i];
+    eachBook.style.backgroundImage = `url(${book.image})`;
+
+    const eachInfo = document.querySelectorAll(infoOfBooks)[i];
+    eachInfo.innerHTML = infoIncludeOrNot(book);
+  });
 }
 
 fetch("json/books.json")
   .then((res) => res.json())
   .then((data) => {
     // bestseller section
-    data.bestseller.forEach((book, i) => {
-      const eachBook = document.querySelectorAll(".each-book-each")[i];
-      eachBook.style.backgroundImage = `url(${book.image})`;
-
-      const eachInfo = document.querySelectorAll(".a-book-info")[i];
-      eachInfo.innerHTML = bookInfo(book);
-    });
+    putIntoBookFrame(data.bestseller, '.each-book-each', '.a-book-info', bookInfo);
 
     // month section
-    data.month.forEach((book, i) => {
-      const eachBook = document.querySelectorAll(".each-book-each-month")[i];
-      eachBook.style.backgroundImage = `url(${book.image})`;
-
-      const eachInfo = document.querySelectorAll(".a-book-info-month")[i];
-      eachInfo.innerHTML = bookInfo(book);
-    });
+    putIntoBookFrame(data.month, '.each-book-each-month', '.a-book-info-month', bookInfo);
 
     // audiobest section
-    data.audiobest.forEach((book, i) => {
-      const eachBook = document.querySelectorAll(".each-book-each-audiobest")[
-        i
-      ];
-      eachBook.style.backgroundImage = `url(${book.image})`;
-
-      const eachInfo = document.querySelectorAll(".a-book-info-audiobook")[i];
-      eachInfo.innerHTML = bookInfo(book);
-    });
+    putIntoBookFrame(data.audiobest, '.each-book-each-audiobest', '.a-book-info-audiobook', bookInfo);
 
     // original section
-    data.original.forEach((book, i) => {
-      const eachBook = document.querySelectorAll(".each-book-each-original")[i];
-      eachBook.style.backgroundImage = `url(${book.image})`;
-
-      const eachInfo = document.querySelectorAll(".a-book-info-original")[i];
-      eachInfo.innerHTML = bookInfoOnlyTitleAuthor(book);
-    });
+    putIntoBookFrame(data.original, '.each-book-each-original', '.a-book-info-original', (book) => bookInfo(book, false));
 
     // stock section
-    data.stock.forEach((book, i) => {
-      const eachBook = document.querySelectorAll(".stock")[i];
-      eachBook.style.backgroundImage = `url(${book.image})`;
-
-      const eachInfo = document.querySelectorAll(".first-info")[i];
-      eachInfo.innerHTML = bookInfo(book);
-    });
+    putIntoBookFrame(data.stock, '.stock', '.first-info', bookInfo);
 
     // english section
-    data.english.forEach((book, i) => {
-      const eachBook = document.querySelectorAll(".english")[i];
-      eachBook.style.backgroundImage = `url(${book.image})`;
-
-      const eachInfo = document.querySelectorAll(".second-info")[i];
-      eachInfo.innerHTML = bookInfo(book);
-    });
+    putIntoBookFrame(data.english, '.english', '.second-info', bookInfo);
 
     // classic section
-    data.classic.forEach((book, i) => {
-      const eachBook = document.querySelectorAll(".classic")[i];
-      eachBook.style.backgroundImage = `url(${book.image})`;
-
-      const eachInfo = document.querySelectorAll(".third-info")[i];
-      eachInfo.innerHTML = bookInfo(book);
-    });
+    putIntoBookFrame(data.classic, '.classic', '.third-info', bookInfo);
 
     // interior section
-    data.interior.forEach((book, i) => {
-      const eachBook = document.querySelectorAll(".interior")[i];
-      eachBook.style.backgroundImage = `url(${book.image})`;
-
-      const eachInfo = document.querySelectorAll(".fourth-info")[i];
-      eachInfo.innerHTML = bookInfo(book);
-    });
+    putIntoBookFrame(data.interior, '.interior', '.fourth-info', bookInfo);
 
     // diet section
-    data.diet.forEach((book, i) => {
-      const eachBook = document.querySelectorAll(".diet")[i];
-      eachBook.style.backgroundImage = `url(${book.image})`;
-
-      const eachInfo = document.querySelectorAll(".fifth-info")[i];
-      eachInfo.innerHTML = bookInfo(book);
-    });
+    putIntoBookFrame(data.diet, '.diet', '.fifth-info', bookInfo);
   });
 
 /* ----- 바로 전 태그의 class가 label => 모든 a-book-info 유형 class 태그 margin-top 변경 ----- */
