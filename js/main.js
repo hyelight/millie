@@ -1,11 +1,13 @@
 /* ----- books section, fav-books section 정적 데이터 순회 ----- */
 function bookInfo(book, includePercentTime = true) {
-  const timeInfo = includePercentTime ? `
+  const timeInfo = includePercentTime
+    ? `
       <div class="complete-percent-time-wrapper">
         <img src="img/icon-complete-reading.png" alt="percent와 time 정보" />
         <span class="book-percent-time">${book.percent} &nbsp;| &nbsp;${book.time}</span>
       </div>
-    ` : '';
+    `
+    : "";
   return `
     <p class="book-title">${book.title}</p>
     <p class="book-author">${book.author}</p>
@@ -27,31 +29,51 @@ fetch("json/books.json")
   .then((res) => res.json())
   .then((data) => {
     // bestseller section
-    putIntoBookFrame(data.bestseller, '.each-book-each', '.a-book-info', bookInfo);
+    putIntoBookFrame(
+      data.bestseller,
+      ".each-book-each",
+      ".a-book-info",
+      bookInfo
+    );
 
     // month section
-    putIntoBookFrame(data.month, '.each-book-each-month', '.a-book-info-month', bookInfo);
+    putIntoBookFrame(
+      data.month,
+      ".each-book-each-month",
+      ".a-book-info-month",
+      bookInfo
+    );
 
     // audiobest section
-    putIntoBookFrame(data.audiobest, '.each-book-each-audiobest', '.a-book-info-audiobook', bookInfo);
+    putIntoBookFrame(
+      data.audiobest,
+      ".each-book-each-audiobest",
+      ".a-book-info-audiobook",
+      bookInfo
+    );
 
     // original section
-    putIntoBookFrame(data.original, '.each-book-each-original', '.a-book-info-original', (book) => bookInfo(book, false));
+    putIntoBookFrame(
+      data.original,
+      ".each-book-each-original",
+      ".a-book-info-original",
+      (book) => bookInfo(book, false)
+    );
 
     // stock section
-    putIntoBookFrame(data.stock, '.stock', '.first-info', bookInfo);
+    putIntoBookFrame(data.stock, ".stock", ".first-info", bookInfo);
 
     // english section
-    putIntoBookFrame(data.english, '.english', '.second-info', bookInfo);
+    putIntoBookFrame(data.english, ".english", ".second-info", bookInfo);
 
     // classic section
-    putIntoBookFrame(data.classic, '.classic', '.third-info', bookInfo);
+    putIntoBookFrame(data.classic, ".classic", ".third-info", bookInfo);
 
     // interior section
-    putIntoBookFrame(data.interior, '.interior', '.fourth-info', bookInfo);
+    putIntoBookFrame(data.interior, ".interior", ".fourth-info", bookInfo);
 
     // diet section
-    putIntoBookFrame(data.diet, '.diet', '.fifth-info', bookInfo);
+    putIntoBookFrame(data.diet, ".diet", ".fifth-info", bookInfo);
   });
 
 /* ----- 바로 전 태그의 class가 label => 모든 a-book-info 유형 class 태그 margin-top 변경 ----- */
